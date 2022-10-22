@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>点光 on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/%E7%82%B9%E5%85%89/</link>
+    <description>Recent content in 点光 on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Fri, 06 Nov 2020 21:02:36 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E7%82%B9%E5%85%89/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羲和开发日志（三） 点光</title>
+      <link>https://jixing.ink/posts/xihe-development-log-3-point-light/</link>
+      <pubDate>Fri, 06 Nov 2020 21:02:36 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-development-log-3-point-light/</guid>
+      <image>https://jixing.ink//images/xihe-result-light-point.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-point.jpg&#34; title=&#34;/images/xihe-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径  用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图    效果展示 颜色、强度和位置是常识，这里就不进行展示。
+半径  通过影子柔和程度可以看出点光半径的大小&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on 愚头的技术分享</title>
+    <link>https://jixing.ink/pages/</link>
+    <description>Recent content in Pages on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Tue, 24 Nov 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羲和</title>
+      <link>https://jixing.ink/pages/xihe/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/xihe/</guid>
+      <description>&lt;p&gt;这是一个照片级渲染云项目，希望未来能够以云服务形式让更多人轻易地接触到高质量渲染效果，并且通过不断地迭代技术来提升其易用性。
+特性  核心  渲染框架 云服务框架  分布计算 去中心化 网络直连 数据安全     渲染  基础  整合CUDA 11.2 整合OptiX 7.3.0 整合MDL 1.6 使用FlatBuffers定义渲染数据 构建光线追踪算法框架 Tile渲染 Progressive渲染 支持多GPU 异步/多线程 检查显卡驱动和CUDA版本   通用  背景材质 反弹次数  针对非半透材质 针对半透材质   显存统计   纹理  数据格式  UInt8 * 4 Float * 4 BMP PNG JPEG TGA HDR KTX DDS EXR TIFF WEBP   边界模式  Wrap Clamp Mirror   采样模式  Point Linear   sRGB   材质  固有色 漫反射贴图 法线强度 法线贴图 金属度 金属贴图 粗糙度/光滑度 粗糙贴图/光滑贴图 自发光 遮罩贴图 全透明 半透明 折射率 薄片 单双面 焦散 体积VDB 多层重叠   模型  三角面  顶点 颜色 法线 切线 UV 子材质   Draco压缩   灯光  平行光  颜色 强度 方向 散射角 长度   点光  颜色 强度 半径 长度   射灯  颜色 强度 半径 长度 方向 内角 外角 IES   矩形面光 圆形面光   相机  透视  横纵比例 FOV 最近距离 最远距离   正交 全景 景深   后期  抗锯齿 降噪  Nvidia DLSS   Tonemap  Filmic Reinhard Uncharted2   颜色矫正 OpenColorIO 输出  渲染图 降噪图 无光图 法线图 UV图 深度图 模型材质实例图 高光图 金属图 粗糙图       工具  构建FlatBuffers场景数据  通过glTF  平行光 点光 射灯 贴图 glTF材质(PBR) 模型 透视相机 读取.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>BIM&#43;&#43;</title>
+      <link>https://jixing.ink/pages/bimpp/</link>
+      <pubDate>Sat, 17 Oct 2020 11:15:05 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/bimpp/</guid>
+      <description>&lt;p&gt;正在建设中、、、
+ 介绍 这是一个扩展BIM技术的网站，里面包含自动识别户型图相关项目，详情请转至这里查看：https://bimpp.cn/。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/bimpp/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>https://jixing.ink/pages/about-me/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/about-me/</guid>
+      <image>https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.jpeg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.jpeg&#34; title=&#34;images/5e13a51a9c71fb03f12b67a2852027a2.jpeg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;曾经做过游戏开发，后来从事家装开发，目前专注于渲染和AI技术。
+本人热衷于将渲染和AI运用到BIM上，通过技术扩展BIM在家装方面的运用。 当然想聊聊CG或游戏相关技术也没问题😄。
+欢迎大家留言或邮件交流。
+您也可以关注我的公众号：愚头的技术分享，谢谢。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/about-me/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

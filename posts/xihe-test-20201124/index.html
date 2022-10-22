@@ -1,0 +1,339 @@
+<!doctype html>
+
+<html lang="zh">
+
+<head>
+  
+  <title>羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数 | 愚头的技术分享</title>
+  
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="纪星" /><meta property="og:title" content="羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数" />
+<meta property="og:description" content="最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
+注意：左侧玻璃球是空心，而右侧玻璃球是实心。
+   Albedo Normal          通过以上三个图得到的降噪结果：
+另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
+ 这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
+下图是一张高采样图(~10m)，未使用降噪。
+ 更多：
+   采样 降噪             相关场景模型取自The Breakfast Room(License: CC-BY)     " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/posts/xihe-test-20201124/" />
+<meta property="article:published_time" content="2020-11-24T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-11-24T00:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数"/>
+<meta name="twitter:description" content="最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
+注意：左侧玻璃球是空心，而右侧玻璃球是实心。
+   Albedo Normal          通过以上三个图得到的降噪结果：
+另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
+ 这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
+下图是一张高采样图(~10m)，未使用降噪。
+ 更多：
+   采样 降噪             相关场景模型取自The Breakfast Room(License: CC-BY)     "/>
+
+<meta name="generator" content="Hugo 0.68.3" />
+    
+  <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  
+  
+  <link rel="icon" type="image/png" href="https://s.gravatar.com/avatar/5e13a51a9c71fb03f12b67a2852027a2?s=80">
+  
+  
+  
+  
+
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "4m90jvz7md");
+</script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <a href="/">愚头的技术分享</a>
+      </h1>
+
+      <ul id="social-media">
+        
+        
+        
+        
+        
+        
+        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="https://mp.weixin.qq.com/s/5fJIaoTSIhIMxhczQyo_oA"><i class="fab fa-weixin fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
+              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="mailto:jixing@jixing.ink"><i class="fas fa-envelope"
+              aria-hidden="true"></i></a></li>
+        
+        
+      </ul>
+      
+      <p><em>一位图形学爱好者的唠叨</em></p>
+      
+    </header>
+
+    
+<nav id="TableOfMain">
+    <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/bimpp/">
+                <i class="fa-li fa  fa-lg"></i><span>BIM&#43;&#43;</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/about-me/">
+                <i class="fa-li fa  fa-lg"></i><span>关于我</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+<article>
+
+    
+    
+    <image src="https://jixing.ink/images/xihe-test-20201124.jpg"></image>
+    
+    
+
+    <h1>羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</h1>
+
+    
+        <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2020-11-24T00:00:00&#43;08:00">2020-11-24</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E7%BE%B2%E5%92%8C">@羲和</a>
+                
+                    , 
+                    <a href="/categories/%E6%B5%8B%E8%AF%95">@测试</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/%E6%9D%90%E8%B4%A8">#材质</a>
+                
+                    , 
+                    <a href="/tags/%E7%9B%B8%E6%9C%BA">#相机</a>
+                
+                    , 
+                    <a href="/tags/%E5%8D%8A%E9%80%8F%E6%98%8E">#半透明</a>
+                
+                    , 
+                    <a href="/tags/%E7%84%A6%E6%95%A3">#焦散</a>
+                
+                    , 
+                    <a href="/tags/%E9%99%8D%E5%99%AA">#降噪</a>
+                
+                    , 
+                    <a href="/tags/dlss">#DLSS</a>
+                
+                    , 
+                    <a href="/tags/%E5%8F%8D%E5%BC%B9%E6%AC%A1%E6%95%B0">#反弹次数</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
+    </ul>
+</aside>
+
+    
+
+    
+        <nav id="TableOfContents"></nav>
+    
+
+    <div class="article-content"><p>最近加入半透明材质、相机景深和降噪功能。
+得到如下渲染采样图：</p>
+<image src="/images/xihe-test-20201124-origin.jpg" data-action="zoom">
+<p>注意：左侧玻璃球是空心，而右侧玻璃球是实心。</p>
+<table>
+<thead>
+<tr>
+<th>Albedo</th>
+<th>Normal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><image src="/images/xihe-test-20201124-albedo.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-normal.jpg" data-action="zoom"></td>
+</tr>
+</tbody>
+</table>
+<p>通过以上三个图得到的降噪结果：</p>
+<image src="/images/xihe-test-20201124-denoise.jpg" data-action="zoom">
+<p>另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。</p>
+<blockquote>
+<p>这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。
+而且个人觉得时间越短，越容易找到问题和检验效果。</p>
+<p>下图是一张高采样图(~10m)，未使用降噪。</p>
+<image src="/images/xihe-test-20201124-final.jpg" data-action="zoom">
+</blockquote>
+<p>更多：</p>
+<table>
+<thead>
+<tr>
+<th>采样</th>
+<th>降噪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><image src="/images/xihe-test-20201124-origin01.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-denoise01.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><image src="/images/xihe-test-20201124-origin02.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-denoise02.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><em>相关场景模型取自<a href="https://blendswap.com/blend/13363">The Breakfast Room(License: CC-BY)</a></em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+    
+    
+<script src="https://utteranc.es/client.js"
+    repo="jixingcn/jixing.ink"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://jixing.ink/posts/xihe-test-20201120/"><i class="fa fa-chevron-circle-left"></i> 羲和效果测试 - 2020.11.20</a>
+        </li>
+        
+        
+        <li>
+            <a href="https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/">修复UE4在macOS Big Sur上的编译问题 <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>| 版权所有，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+    </footer>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-182236447-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
+    
+    <a target="_blank" style="color:#939393;" href="http://beian.miit.gov.cn/">晋ICP备2020009942号-2</a>
+    
+    
+    <a target="_blank" style="color:#939393;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010502050875" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img style="width: 18px; height: 18px;" src="/images/logos/gongan.png" alt="beian" />晋公网安备 14010502050875号
+    </a>
+    
+</div>
+</body>
+</html>

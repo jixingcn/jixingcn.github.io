@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DXGI_ERROR_DEVICE_REMOVED on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/dxgi_error_device_removed/</link>
+    <description>Recent content in DXGI_ERROR_DEVICE_REMOVED on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Wed, 10 Mar 2021 09:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/dxgi_error_device_removed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED”</title>
+      <link>https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/</link>
+      <pubDate>Wed, 10 Mar 2021 09:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/</guid>
+      <image>https://jixing.ink//images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg&#34; title=&#34;/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近在做UE4.26插件时遇到了一个奇怪的渲染崩溃问题。在编辑器模式下，这个插件会自动生成上百个&lt;strong&gt;StaticMesh&lt;/strong&gt;资源，但是生成到190个左右时就会崩溃。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

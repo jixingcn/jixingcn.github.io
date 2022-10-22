@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IncrediBuild on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/incredibuild/</link>
+    <description>Recent content in IncrediBuild on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Wed, 10 Mar 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/incredibuild/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>想编译UE4？请不要安装免费版IncrediBuild！</title>
+      <link>https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/</link>
+      <pubDate>Wed, 10 Mar 2021 13:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/</guid>
+      <image>https://jixing.ink//images/dont-install-free-version-of-incredibuild-for-ue4.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/dont-install-free-version-of-incredibuild-for-ue4.jpg&#34; title=&#34;/images/dont-install-free-version-of-incredibuild-for-ue4.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;IncrediBuild是一个很棒的分布式编译工具，对于编译UE4有很好的加速作用，但是不要使用免费版去编译UE4，因为、、、&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

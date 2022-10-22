@@ -1,0 +1,350 @@
+<!doctype html>
+
+<html lang="zh">
+
+<head>
+  
+  <title>羲和开发日志（一） 介绍 | 愚头的技术分享</title>
+  
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="纪星" /><meta property="og:title" content="羲和开发日志（一） 介绍" />
+<meta property="og:description" content="本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
+关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+ 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
+本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
+不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
+渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
+  OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。   Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
+Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/posts/xihe-development-log-1-intro/" />
+<meta property="article:published_time" content="2020-10-28T22:24:05+08:00" />
+<meta property="article:modified_time" content="2020-10-28T22:24:05+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="羲和开发日志（一） 介绍"/>
+<meta name="twitter:description" content="本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
+关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+ 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
+本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
+不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
+渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
+  OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。   Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
+Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。"/>
+
+<meta name="generator" content="Hugo 0.68.3" />
+    
+  <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  
+  
+  <link rel="icon" type="image/png" href="https://s.gravatar.com/avatar/5e13a51a9c71fb03f12b67a2852027a2?s=80">
+  
+  
+  
+  
+
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "4m90jvz7md");
+</script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <a href="/">愚头的技术分享</a>
+      </h1>
+
+      <ul id="social-media">
+        
+        
+        
+        
+        
+        
+        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="https://mp.weixin.qq.com/s/5fJIaoTSIhIMxhczQyo_oA"><i class="fab fa-weixin fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
+              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="mailto:jixing@jixing.ink"><i class="fas fa-envelope"
+              aria-hidden="true"></i></a></li>
+        
+        
+      </ul>
+      
+      <p><em>一位图形学爱好者的唠叨</em></p>
+      
+    </header>
+
+    
+<nav id="TableOfMain">
+    <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/bimpp/">
+                <i class="fa-li fa  fa-lg"></i><span>BIM&#43;&#43;</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/about-me/">
+                <i class="fa-li fa  fa-lg"></i><span>关于我</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+<article>
+
+    
+    
+    <image src="https://jixing.ink/images/xihe-intro.jpg"></image>
+    
+    
+
+    <h1>羲和开发日志（一） 介绍</h1>
+
+    
+        <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2020-10-28T22:24:05&#43;08:00">2020-10-28</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E7%BE%B2%E5%92%8C">@羲和</a>
+                
+                    , 
+                    <a href="/categories/%E5%BC%80%E5%8F%91">@开发</a>
+                
+                    , 
+                    <a href="/categories/%E9%A1%B9%E7%9B%AE">@项目</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/%E6%B8%B2%E6%9F%93">#渲染</a>
+                
+                    , 
+                    <a href="/tags/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA">#光线追踪</a>
+                
+                    , 
+                    <a href="/tags/%E4%BB%8B%E7%BB%8D">#介绍</a>
+                
+                    , 
+                    <a href="/tags/cuda">#CUDA</a>
+                
+                    , 
+                    <a href="/tags/optix">#OptiX</a>
+                
+                    , 
+                    <a href="/tags/mdl">#MDL</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
+    </ul>
+</aside>
+
+    
+
+    
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#目的">目的</a></li>
+        <li><a href="#技术">技术</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+
+    <div class="article-content"><blockquote>
+<p>本文介绍<a href="/pages/xihe">羲和</a>项目的背景、目标和技术，当前项目状态请点<a href="../../pages/xihe/">这里</a>。</p>
+<h4 id="关于命名">关于命名</h4>
+<p>“<strong>羲和</strong>”是<a href="https://baike.baidu.com/item/%E7%BE%B2%E5%92%8C/278594">中国古代神话的太阳女神</a>，是善于运用光的神。
+渲染离不开对光的研究，而光学追踪更是如此，所以选用“<strong>羲和</strong>”来命名这个项目。</p>
+</blockquote>
+<h2 id="背景">背景</h2>
+<p>最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。
+正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。</p>
+<p>本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。
+也构建过自己的渲染器，但是在看到<a href="https://www.unrealengine.com/">UnrealEngine</a>和<a href="https://www.cryengine.com/">CryEngine</a>都开源了自己的引擎，就放弃了自己的项目😢。</p>
+<p>不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。</p>
+<h3 id="渲染器">渲染器</h3>
+<p>现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：</p>
+<blockquote>
+<ul>
+<li><a href="https://developer.nvidia.com/optix">OptiX</a>是由<a href="https://www.nvidia.com/">NVIDIA</a>提供的光线追踪技术。</li>
+<li><a href="https://github.com/imageworks/OpenShadingLanguage/">OpenShaderLanguage</a> (<a href="https://github.com/imageworks/OpenShadingLanguage/">OSL</a>)是由<a href="http://opensource.imageworks.com/">ImageWorks</a> (来自索尼影视)开源的一款影视级着色语言。</li>
+</ul>
+</blockquote>
+<h4 id="appleseed"><a href="https://appleseedhq.net/">Appleseed</a></h4>
+<p>开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。
+它是<a href="https://www.gafferhq.org/">Graffer</a>的默认渲染器，要知道不少影视作品都会使用<a href="https://www.gafferhq.org/">Graffer</a>，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。</p>
+<h4 id="mitsuba2"><a href="https://github.com/mitsuba-renderer/mitsuba2">Mitsuba2</a></h4>
+<p>开源项目，由几位行业知名的教授（包括《<a href="http://www.pbr-book.org/">Physically Based Rendering: From Theory to Implementation</a>》的几位著作者）共同构建。
+既可以进行CPU渲染，也可以通过<a href="https://developer.nvidia.com/optix">OptiX</a>进行GPU渲染。它非常值得研究和学习。</p>
+<h4 id="v-ray"><a href="https://www.chaosgroup.com/">V-Ray</a></h4>
+<p>建筑渲染的翘楚，它与很多公司都有合作，像<a href="https://www.kujiale.com/">酷家乐</a>和<a href="https://www.3vjia.com/">三维家</a>都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。
+在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。</p>
+<h4 id="iray"><a href="https://www.nvidia.com/en-us/design-visualization/iray/">Iray</a></h4>
+<p><a href="https://www.nvidia.com/">NVIDIA</a>开发的渲染库，需要购买商业授权。
+从介绍来看既可以实时渲染也可以进行影视渲染，功能十分强大，像知名的<a href="https://www.keyshot.com/">KeyShot</a>就是基于此库开发的。</p>
+<h4 id="octanerender"><a href="https://home.otoy.com/render/octane-render/">OctaneRender</a></h4>
+<p>算是较早使用GPU进行渲染的软件，其渲染内核基于<a href="https://developer.nvidia.com/optix">OptiX</a>和<a href="https://github.com/imageworks/OpenShadingLanguage/">OSL</a>。一方面它在运用GPU加速方面十分出色，另一方面<a href="https://github.com/imageworks/OpenShadingLanguage/">OSL</a>使得其使用起来更方便快捷。</p>
+<p>它有几种渲染内核，其中<strong>Path Tracing</strong>是最耗时但效果最真实的，每种内核都是在光栅化和光线追踪之间进行取舍。
+用户可以通过<strong>Direct Lighting</strong>进行快速地预览，通过<strong>Path Tracing</strong>得到最终的产品。
+另外最近几年又针对AMD的GPU进行了开发使得它能够脱离<a href="https://www.nvidia.com/">NVIDIA</a>的<a href="https://developer.nvidia.com/optix">OptiX</a>在更多GPU上运行。</p>
+<h4 id="unrealengine"><a href="https://www.unrealengine.com/">UnrealEngine</a></h4>
+<p>严格来讲UE4不算是渲染器，是一个游戏引擎，但是近几年来它以出色的实时渲染效果和开源政策，得到了市场的青睐。
+各个行业都拿它来秀效果，从游戏到房地产，从影视到智慧城市，都想和它有交集。
+不过在经过一段时间的磨合后会发现UE4的开发难度真的不低，对于软件开发和技术美术来说都是不小的挑战。
+要知道<strong>各个行业的需求不仅仅是画面和效果，还包含很多特有的功能，而一个游戏引擎是无法满足的，所以找到合适的最重要。</strong></p>
+<p>前段时间UE5的演示也震撼了很多人，个人觉得<a href="https://www.epicgames.com/">EpicGames</a>在实时渲染方面运用了更多光线追踪原理，使得实时渲染进一步靠近光线追踪。</p>
+<h2 id="目的">目的</h2>
+<p>市面上已经有这么多渲染器为什么还要再做一个呢？为什么是基于光线追踪呢？
+的确市面上有很多非常棒的渲染器，但是想要实现自己的算法并不简单。
+开源渲染器都有自己的架构，去改动其渲染内核会花费很大的精力，而构建一个新的光线追踪渲染器反而更简单。
+构建一个完全基于光线追踪的渲染器也更符合未来发展的方向，。
+所以这个项目的目的就是为了能够承载更多新的算法和技术，并快速验证理论，提高理论到实践的转换率，将新算法和技术更有效地运用到行业中。</p>
+<h2 id="技术">技术</h2>
+<p>通过NVIDIA的<a href="https://developer.nvidia.com/optix">OptiX</a>和<a href="https://developer.nvidia.com/cuda-toolkit">CUDA</a>实现光线追踪算法，并利用<a href="https://www.nvidia.com/en-us/design-visualization/technologies/material-definition-language/">MDL</a>来表达材质。
+这些看上去可能和<a href="https://www.nvidia.com/en-us/design-visualization/iray/">Iray</a>相同，但是要知道<a href="https://www.nvidia.com/en-us/design-visualization/iray/">Iray</a>是受限于NVIDIA设备的，而本项目将来会运行在其它设备上。</p>
+<p>附：目前渲染测试效果
+<img src="/images/xihe-intro-result.jpg" alt="xihe-intro-result"></p>
+</div>
+
+    
+    
+<script src="https://utteranc.es/client.js"
+    repo="jixingcn/jixing.ink"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        
+        <li>
+            <a href="https://jixing.ink/posts/xihe-development-log-2-direction-light/">羲和开发日志（二） 平行光 <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>| 版权所有，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+    </footer>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-182236447-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
+    
+    <a target="_blank" style="color:#939393;" href="http://beian.miit.gov.cn/">晋ICP备2020009942号-2</a>
+    
+    
+    <a target="_blank" style="color:#939393;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010502050875" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img style="width: 18px; height: 18px;" src="/images/logos/gongan.png" alt="beian" />晋公网安备 14010502050875号
+    </a>
+    
+</div>
+</body>
+</html>

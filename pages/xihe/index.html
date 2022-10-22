@@ -1,0 +1,662 @@
+<!doctype html>
+
+<html lang="zh">
+
+<head>
+  
+  <title>羲和 | 愚头的技术分享</title>
+  
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="纪星" /><meta property="og:title" content="羲和" />
+<meta property="og:description" content="这是一个照片级渲染云项目，希望未来能够以云服务形式让更多人轻易地接触到高质量渲染效果，并且通过不断地迭代技术来提升其易用性。
+特性  核心  渲染框架 云服务框架  分布计算 去中心化 网络直连 数据安全     渲染  基础  整合CUDA 11.2 整合OptiX 7.3.0 整合MDL 1.6 使用FlatBuffers定义渲染数据 构建光线追踪算法框架 Tile渲染 Progressive渲染 支持多GPU 异步/多线程 检查显卡驱动和CUDA版本   通用  背景材质 反弹次数  针对非半透材质 针对半透材质   显存统计   纹理  数据格式  UInt8 * 4 Float * 4 BMP PNG JPEG TGA HDR KTX DDS EXR TIFF WEBP   边界模式  Wrap Clamp Mirror   采样模式  Point Linear   sRGB   材质  固有色 漫反射贴图 法线强度 法线贴图 金属度 金属贴图 粗糙度/光滑度 粗糙贴图/光滑贴图 自发光 遮罩贴图 全透明 半透明 折射率 薄片 单双面 焦散 体积VDB 多层重叠   模型  三角面  顶点 颜色 法线 切线 UV 子材质   Draco压缩   灯光  平行光  颜色 强度 方向 散射角 长度   点光  颜色 强度 半径 长度   射灯  颜色 强度 半径 长度 方向 内角 外角 IES   矩形面光 圆形面光   相机  透视  横纵比例 FOV 最近距离 最远距离   正交 全景 景深   后期  抗锯齿 降噪  Nvidia DLSS   Tonemap  Filmic Reinhard Uncharted2   颜色矫正 OpenColorIO 输出  渲染图 降噪图 无光图 法线图 UV图 深度图 模型材质实例图 高光图 金属图 粗糙图       工具  构建FlatBuffers场景数据  通过glTF  平行光 点光 射灯 贴图 glTF材质(PBR) 模型 透视相机 读取." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/pages/xihe/" />
+<meta property="article:published_time" content="2020-11-24T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-11-24T00:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="羲和"/>
+<meta name="twitter:description" content="这是一个照片级渲染云项目，希望未来能够以云服务形式让更多人轻易地接触到高质量渲染效果，并且通过不断地迭代技术来提升其易用性。
+特性  核心  渲染框架 云服务框架  分布计算 去中心化 网络直连 数据安全     渲染  基础  整合CUDA 11.2 整合OptiX 7.3.0 整合MDL 1.6 使用FlatBuffers定义渲染数据 构建光线追踪算法框架 Tile渲染 Progressive渲染 支持多GPU 异步/多线程 检查显卡驱动和CUDA版本   通用  背景材质 反弹次数  针对非半透材质 针对半透材质   显存统计   纹理  数据格式  UInt8 * 4 Float * 4 BMP PNG JPEG TGA HDR KTX DDS EXR TIFF WEBP   边界模式  Wrap Clamp Mirror   采样模式  Point Linear   sRGB   材质  固有色 漫反射贴图 法线强度 法线贴图 金属度 金属贴图 粗糙度/光滑度 粗糙贴图/光滑贴图 自发光 遮罩贴图 全透明 半透明 折射率 薄片 单双面 焦散 体积VDB 多层重叠   模型  三角面  顶点 颜色 法线 切线 UV 子材质   Draco压缩   灯光  平行光  颜色 强度 方向 散射角 长度   点光  颜色 强度 半径 长度   射灯  颜色 强度 半径 长度 方向 内角 外角 IES   矩形面光 圆形面光   相机  透视  横纵比例 FOV 最近距离 最远距离   正交 全景 景深   后期  抗锯齿 降噪  Nvidia DLSS   Tonemap  Filmic Reinhard Uncharted2   颜色矫正 OpenColorIO 输出  渲染图 降噪图 无光图 法线图 UV图 深度图 模型材质实例图 高光图 金属图 粗糙图       工具  构建FlatBuffers场景数据  通过glTF  平行光 点光 射灯 贴图 glTF材质(PBR) 模型 透视相机 读取."/>
+
+<meta name="generator" content="Hugo 0.68.3" />
+    
+  <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  
+  
+  <link rel="icon" type="image/png" href="https://s.gravatar.com/avatar/5e13a51a9c71fb03f12b67a2852027a2?s=80">
+  
+  
+  
+  
+
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "4m90jvz7md");
+</script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <a href="/">愚头的技术分享</a>
+      </h1>
+
+      <ul id="social-media">
+        
+        
+        
+        
+        
+        
+        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="https://mp.weixin.qq.com/s/5fJIaoTSIhIMxhczQyo_oA"><i class="fab fa-weixin fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
+              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="mailto:jixing@jixing.ink"><i class="fas fa-envelope"
+              aria-hidden="true"></i></a></li>
+        
+        
+      </ul>
+      
+      <p><em>一位图形学爱好者的唠叨</em></p>
+      
+    </header>
+
+    
+<nav id="TableOfMain">
+    <ul>
+        
+        <li>
+            <a class="active" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/bimpp/">
+                <i class="fa-li fa  fa-lg"></i><span>BIM&#43;&#43;</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/about-me/">
+                <i class="fa-li fa  fa-lg"></i><span>关于我</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+<article>
+
+    
+
+    <h1>羲和</h1>
+
+    
+
+    
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#特性">特性</a></li>
+        <li><a href="#文章">文章</a></li>
+        <li><a href="#展示">展示</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+
+    <div class="article-content"><p>这是一个<strong>照片级渲染云</strong>项目，希望未来能够以云服务形式让更多人轻易地接触到高质量渲染效果，并且通过不断地迭代技术来提升其易用性。</p>
+<h2 id="特性">特性</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 核心
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 渲染框架</li>
+<li><input disabled="" type="checkbox"> 云服务框架
+<ul>
+<li>分布计算</li>
+<li>去中心化</li>
+<li>网络直连</li>
+<li>数据安全</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 渲染
+<ul>
+<li><input disabled="" type="checkbox"> 基础
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 整合<a href="https://developer.nvidia.com/cuda-toolkit">CUDA</a> 11.2</li>
+<li><input checked="" disabled="" type="checkbox"> 整合<a href="https://developer.nvidia.com/optix">OptiX</a> 7.3.0</li>
+<li><input checked="" disabled="" type="checkbox"> 整合<a href="https://www.nvidia.com/en-us/design-visualization/technologies/material-definition-language/">MDL</a> 1.6</li>
+<li><input checked="" disabled="" type="checkbox"> 使用<a href="https://google.github.io/flatbuffers/">FlatBuffers</a>定义渲染数据</li>
+<li><input checked="" disabled="" type="checkbox"> 构建光线追踪算法框架</li>
+<li><input checked="" disabled="" type="checkbox"> Tile渲染</li>
+<li><input checked="" disabled="" type="checkbox"> Progressive渲染</li>
+<li><input disabled="" type="checkbox"> 支持多GPU</li>
+<li><input checked="" disabled="" type="checkbox"> 异步/多线程</li>
+<li><input checked="" disabled="" type="checkbox"> 检查显卡驱动和CUDA版本</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 通用
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 背景材质</li>
+<li><input checked="" disabled="" type="checkbox"> 反弹次数
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 针对非半透材质</li>
+<li><input checked="" disabled="" type="checkbox"> 针对半透材质</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 显存统计</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 纹理
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 数据格式
+<ul>
+<li><input checked="" disabled="" type="checkbox"> UInt8 * 4</li>
+<li><input checked="" disabled="" type="checkbox"> Float * 4</li>
+<li><input checked="" disabled="" type="checkbox"> BMP</li>
+<li><input checked="" disabled="" type="checkbox"> PNG</li>
+<li><input checked="" disabled="" type="checkbox"> JPEG</li>
+<li><input checked="" disabled="" type="checkbox"> TGA</li>
+<li><input checked="" disabled="" type="checkbox"> HDR</li>
+<li><input checked="" disabled="" type="checkbox"> KTX</li>
+<li><input checked="" disabled="" type="checkbox"> DDS</li>
+<li><input checked="" disabled="" type="checkbox"> EXR</li>
+<li><input checked="" disabled="" type="checkbox"> TIFF</li>
+<li><input checked="" disabled="" type="checkbox"> WEBP</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 边界模式
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Wrap</li>
+<li><input checked="" disabled="" type="checkbox"> Clamp</li>
+<li><input checked="" disabled="" type="checkbox"> Mirror</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 采样模式
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Point</li>
+<li><input checked="" disabled="" type="checkbox"> Linear</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> sRGB</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 材质
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 固有色</li>
+<li><input checked="" disabled="" type="checkbox"> 漫反射贴图</li>
+<li><input checked="" disabled="" type="checkbox"> 法线强度</li>
+<li><input checked="" disabled="" type="checkbox"> 法线贴图</li>
+<li><input checked="" disabled="" type="checkbox"> 金属度</li>
+<li><input checked="" disabled="" type="checkbox"> 金属贴图</li>
+<li><input checked="" disabled="" type="checkbox"> 粗糙度/光滑度</li>
+<li><input checked="" disabled="" type="checkbox"> 粗糙贴图/光滑贴图</li>
+<li><input checked="" disabled="" type="checkbox"> 自发光</li>
+<li><input checked="" disabled="" type="checkbox"> 遮罩贴图</li>
+<li><input checked="" disabled="" type="checkbox"> 全透明</li>
+<li><input checked="" disabled="" type="checkbox"> 半透明</li>
+<li><input checked="" disabled="" type="checkbox"> 折射率</li>
+<li><input disabled="" type="checkbox"> 薄片</li>
+<li><input checked="" disabled="" type="checkbox"> 单双面</li>
+<li><input disabled="" type="checkbox"> 焦散</li>
+<li><input disabled="" type="checkbox"> 体积VDB</li>
+<li><input checked="" disabled="" type="checkbox"> 多层重叠</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 模型
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 三角面
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 顶点</li>
+<li><input checked="" disabled="" type="checkbox"> 颜色</li>
+<li><input checked="" disabled="" type="checkbox"> 法线</li>
+<li><input checked="" disabled="" type="checkbox"> 切线</li>
+<li><input checked="" disabled="" type="checkbox"> UV</li>
+<li><input checked="" disabled="" type="checkbox"> 子材质</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Draco压缩</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 灯光
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 平行光
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 颜色</li>
+<li><input checked="" disabled="" type="checkbox"> 强度</li>
+<li><input checked="" disabled="" type="checkbox"> 方向</li>
+<li><input checked="" disabled="" type="checkbox"> 散射角</li>
+<li><input checked="" disabled="" type="checkbox"> 长度</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 点光
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 颜色</li>
+<li><input checked="" disabled="" type="checkbox"> 强度</li>
+<li><input checked="" disabled="" type="checkbox"> 半径</li>
+<li><input checked="" disabled="" type="checkbox"> 长度</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 射灯
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 颜色</li>
+<li><input checked="" disabled="" type="checkbox"> 强度</li>
+<li><input checked="" disabled="" type="checkbox"> 半径</li>
+<li><input checked="" disabled="" type="checkbox"> 长度</li>
+<li><input checked="" disabled="" type="checkbox"> 方向</li>
+<li><input checked="" disabled="" type="checkbox"> 内角</li>
+<li><input checked="" disabled="" type="checkbox"> 外角</li>
+<li><input disabled="" type="checkbox"> IES</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 矩形面光</li>
+<li><input checked="" disabled="" type="checkbox"> 圆形面光</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 相机
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 透视
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 横纵比例</li>
+<li><input checked="" disabled="" type="checkbox"> FOV</li>
+<li><input checked="" disabled="" type="checkbox"> 最近距离</li>
+<li><input disabled="" type="checkbox"> 最远距离</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 正交</li>
+<li><input checked="" disabled="" type="checkbox"> 全景</li>
+<li><input checked="" disabled="" type="checkbox"> 景深</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 后期
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 抗锯齿</li>
+<li><input checked="" disabled="" type="checkbox"> 降噪
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://developer.nvidia.com/dlss">Nvidia DLSS</a></li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Tonemap
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <a href="http://filmicworlds.com/blog/filmic-tonemapping-operators/">Filmic</a></li>
+<li><input checked="" disabled="" type="checkbox"> <a href="http://www.cmap.polytechnique.fr/~peyre/cours/x2005signal/hdr_photographic.pdf">Reinhard</a></li>
+<li><input checked="" disabled="" type="checkbox"> <a href="http://filmicworlds.com/blog/filmic-tonemapping-operators/">Uncharted2</a></li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 颜色矫正 <a href="https://opencolorio.org/">OpenColorIO</a></li>
+<li><input disabled="" type="checkbox"> 输出
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 渲染图</li>
+<li><input checked="" disabled="" type="checkbox"> 降噪图</li>
+<li><input checked="" disabled="" type="checkbox"> 无光图</li>
+<li><input checked="" disabled="" type="checkbox"> 法线图</li>
+<li><input checked="" disabled="" type="checkbox"> UV图</li>
+<li><input checked="" disabled="" type="checkbox"> 深度图</li>
+<li><input checked="" disabled="" type="checkbox"> 模型材质实例图</li>
+<li><input disabled="" type="checkbox"> 高光图</li>
+<li><input disabled="" type="checkbox"> 金属图</li>
+<li><input disabled="" type="checkbox"> 粗糙图</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 工具
+<ul>
+<li><input disabled="" type="checkbox"> 构建<a href="https://google.github.io/flatbuffers/">FlatBuffers</a>场景数据
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 通过<a href="https://khronos.org/gltf">glTF</a>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 平行光</li>
+<li><input checked="" disabled="" type="checkbox"> 点光</li>
+<li><input checked="" disabled="" type="checkbox"> 射灯</li>
+<li><input disabled="" type="checkbox"> 贴图</li>
+<li><input checked="" disabled="" type="checkbox"> glTF材质(PBR)</li>
+<li><input checked="" disabled="" type="checkbox"> 模型</li>
+<li><input checked="" disabled="" type="checkbox"> 透视相机</li>
+<li><input checked="" disabled="" type="checkbox"> 读取<code>.ini</code>配置文件
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 构建灯光</li>
+<li><input checked="" disabled="" type="checkbox"> 构建相机</li>
+<li><input checked="" disabled="" type="checkbox"> 缩放灯光强度</li>
+<li><input checked="" disabled="" type="checkbox"> 缩放自发光强度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 导出<a href="http://blender.org/">Blender</a>场景
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 纹理</li>
+<li><input checked="" disabled="" type="checkbox"> 材质
+<ul>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeBsdfPrincipled
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Color/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Normal/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Strength</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeBsdfDiffuse
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Color/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Normal/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Strength</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeBsdfGlossy
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Roughness</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeBsdfGlass
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Roughness</li>
+<li><input checked="" disabled="" type="checkbox"> IOR</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeEmission
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Color/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Strength</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> ShaderNodeBackground
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Color/Texture</li>
+<li><input checked="" disabled="" type="checkbox"> Strength</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 模型</li>
+<li><input checked="" disabled="" type="checkbox"> 灯光
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 平行光</li>
+<li><input checked="" disabled="" type="checkbox"> 点光</li>
+<li><input checked="" disabled="" type="checkbox"> 射灯</li>
+<li><input checked="" disabled="" type="checkbox"> 面光</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 透视相机</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 场景查看器</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 云服务
+<ul>
+<li><input disabled="" type="checkbox"> 分布式
+<ul>
+<li><input disabled="" type="checkbox"> 网络链接
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 前端与渲染端</li>
+<li><input disabled="" type="checkbox"> 渲染端与渲染端</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 数据同步</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 渲染端
+<ul>
+<li><input disabled="" type="checkbox"> 监听链接请求</li>
+<li><input disabled="" type="checkbox"> 链接前端</li>
+<li><input disabled="" type="checkbox"> 消息处理</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 前端
+<ul>
+<li><input disabled="" type="checkbox"> 网页
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 链接渲染服务</li>
+<li><input disabled="" type="checkbox"> 打开glTF场景</li>
+<li><input disabled="" type="checkbox"> 同步场景
+<ul>
+<li><input disabled="" type="checkbox"> 同步模型</li>
+<li><input disabled="" type="checkbox"> 同步环境光</li>
+<li><input checked="" disabled="" type="checkbox"> 同步摄像机</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 主动交互
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 触发渲染</li>
+<li><input checked="" disabled="" type="checkbox"> 获取渲染结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 场景查看器</li>
+<li><input disabled="" type="checkbox"> Blender插件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="文章">文章</h2>
+<h3 id="日志">日志</h3>
+<ul>
+<li><a href="/posts/xihe-development-log-1-intro">羲和开发日志（一） 介绍</a></li>
+<li><a href="/posts/xihe-development-log-2-direction-light">羲和开发日志（二） 平行光</a></li>
+<li><a href="/posts/xihe-development-log-3-point-light">羲和开发日志（三） 点光</a></li>
+<li><a href="/posts/xihe-development-log-4-spot-light">羲和开发日志（四） 射灯</a></li>
+</ul>
+<h3 id="测试">测试</h3>
+<ul>
+<li><a href="/posts/xihe-test-20201111">羲和效果测试 - 2020.11.11</a></li>
+<li><a href="/posts/xihe-test-20201119">羲和效果测试 - 2020.11.11 (后续)</a></li>
+<li><a href="/posts/xihe-test-20201120">羲和效果测试 - 2020.11.20</a></li>
+<li><a href="/posts/xihe-test-20201124">羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</a></li>
+<li><a href="/posts/xihe-test-20210428">羲和效果测试 - 2021.04.28 降噪与抗锯齿</a></li>
+</ul>
+<h2 id="展示">展示</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-06-15</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/sponza0_1024x1024_RADIANCE_s321_t363.jpg" data-action="zoom"></td>
+<td><image src="/images/sponza3_1024x1024_RADIANCE_s305_t314.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><image src="/images/sponza2_1024x1024_RADIANCE_s307_t284.jpg" data-action="zoom"></td>
+<td><image src="/images/sponza1_1024x1024_RADIANCE_s335_t315.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2021-06-13</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/salle_de_bain135_1200x1200_RADIANCE_s2011_t1316.jpg" data-action="zoom"></td>
+<td><image src="/images/salle_de_bain135_1200x1200_DENOISE_s667_t575.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><image src="/images/salle_de_bain135_1200x1200_ALBEDO_s68_t3.jpg" data-action="zoom"></td>
+<td><image src="/images/salle_de_bain135_1200x1200_NORMAL_s64_t3.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2021-05-25</td>
+<td></td>
+</tr>
+<tr>
+<td>1200x1200 降噪，采样:~1000</td>
+<td>1200x1200 未降噪，采样:~6000</td>
+</tr>
+<tr>
+<td><image src="/images/classroom_1200x1200_RADIANCE_DENOISE_s1411_t1438.jpg" data-action="zoom"></td>
+<td><image src="/images/classroom_1200x1200_RADIANCE_s6084_t4919.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2021-04-28</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/the_breakfast_room_bs_600x600_RADIANCE_DENOISE_s252_t130.jpg" data-action="zoom"></td>
+<td><image src="/images/classroom_600x600_RADIANCE_DENOISE_s369_t139.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><image src="/images/salle_de_bain135_600x600_RADIANCE_DENOISE_s509_t137.jpg" data-action="zoom"></td>
+<td><image src="/images/lone-monk_cycles_and_exposure-node_demo_600x600_RADIANCE_DENOISE_s330_t101.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-25</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/xihe-test-20201124-denoise04.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-denoise05.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-24</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/xihe-test-20201124-final.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-denoise03.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td><image src="/images/xihe-test-20201124-denoise01.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-test-20201124-denoise02.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-20</td>
+<td>2020-11-19</td>
+</tr>
+<tr>
+<td><image src="/images/xihe-result-sponza01.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-result-cornell02.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-11</td>
+<td>2020-11-07</td>
+</tr>
+<tr>
+<td><image src="/images/xihe-result-cornell01.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-result-20201107a.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-06</td>
+<td></td>
+</tr>
+<tr>
+<td><image src="/images/xihe-result-20201106a.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-result-20201106b.jpg" data-action="zoom"></td>
+</tr>
+<tr>
+<td>2020-11-03</td>
+<td>2020-11-01</td>
+</tr>
+<tr>
+<td><image src="/images/xihe-result-20201103a.jpg" data-action="zoom"></td>
+<td><image src="/images/xihe-intro-result.jpg" data-action="zoom"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>相关场景资源取自<a href="https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Sponza">glTF范例 Sponza</a></em></li>
+<li><em>相关场景模型取自<a href="https://blendswap.com/blend/13363">BLENDSWAP The Breakfast Room(License: CC-BY)</a></em></li>
+<li><em>相关场景模型取自<a href="https://blendswap.com/blend/12584">BLENDSWAP Bathroom(License: CC-BY)</a></em></li>
+<li><em>相关场景模型取自<a href="https://www.blender.org/download/demo-files/">Blender演示 Lone Monk(License: CC-0)</a></em></li>
+<li><em>相关场景模型取自<a href="https://www.blender.org/download/demo-files/">Blender演示 Classroom(License: CC-0)</a></em></li>
+</ul>
+</div>
+
+    
+
+</article>
+
+
+
+
+
+
+</main>
+    <footer>
+        <h6>| 版权所有，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+    </footer>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-182236447-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
+    
+    <a target="_blank" style="color:#939393;" href="http://beian.miit.gov.cn/">晋ICP备2020009942号-2</a>
+    
+    
+    <a target="_blank" style="color:#939393;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010502050875" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img style="width: 18px; height: 18px;" src="/images/logos/gongan.png" alt="beian" />晋公网安备 14010502050875号
+    </a>
+    
+</div>
+</body>
+</html>

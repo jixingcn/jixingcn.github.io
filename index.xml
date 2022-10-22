@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>愚头的技术分享</title>
+    <link>https://jixing.ink/</link>
+    <description>Recent content on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Sat, 17 Jul 2021 22:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羲和</title>
+      <link>https://jixing.ink/pages/xihe/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/xihe/</guid>
+      <description>&lt;p&gt;这是一个照片级渲染云项目，希望未来能够以云服务形式让更多人轻易地接触到高质量渲染效果，并且通过不断地迭代技术来提升其易用性。
+特性  核心  渲染框架 云服务框架  分布计算 去中心化 网络直连 数据安全     渲染  基础  整合CUDA 11.2 整合OptiX 7.3.0 整合MDL 1.6 使用FlatBuffers定义渲染数据 构建光线追踪算法框架 Tile渲染 Progressive渲染 支持多GPU 异步/多线程 检查显卡驱动和CUDA版本   通用  背景材质 反弹次数  针对非半透材质 针对半透材质   显存统计   纹理  数据格式  UInt8 * 4 Float * 4 BMP PNG JPEG TGA HDR KTX DDS EXR TIFF WEBP   边界模式  Wrap Clamp Mirror   采样模式  Point Linear   sRGB   材质  固有色 漫反射贴图 法线强度 法线贴图 金属度 金属贴图 粗糙度/光滑度 粗糙贴图/光滑贴图 自发光 遮罩贴图 全透明 半透明 折射率 薄片 单双面 焦散 体积VDB 多层重叠   模型  三角面  顶点 颜色 法线 切线 UV 子材质   Draco压缩   灯光  平行光  颜色 强度 方向 散射角 长度   点光  颜色 强度 半径 长度   射灯  颜色 强度 半径 长度 方向 内角 外角 IES   矩形面光 圆形面光   相机  透视  横纵比例 FOV 最近距离 最远距离   正交 全景 景深   后期  抗锯齿 降噪  Nvidia DLSS   Tonemap  Filmic Reinhard Uncharted2   颜色矫正 OpenColorIO 输出  渲染图 降噪图 无光图 法线图 UV图 深度图 模型材质实例图 高光图 金属图 粗糙图       工具  构建FlatBuffers场景数据  通过glTF  平行光 点光 射灯 贴图 glTF材质(PBR) 模型 透视相机 读取.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>BIM&#43;&#43;</title>
+      <link>https://jixing.ink/pages/bimpp/</link>
+      <pubDate>Sat, 17 Oct 2020 11:15:05 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/bimpp/</guid>
+      <description>&lt;p&gt;正在建设中、、、
+ 介绍 这是一个扩展BIM技术的网站，里面包含自动识别户型图相关项目，详情请转至这里查看：https://bimpp.cn/。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/bimpp/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>https://jixing.ink/pages/about-me/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/about-me/</guid>
+      <image>https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.jpeg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.jpeg&#34; title=&#34;images/5e13a51a9c71fb03f12b67a2852027a2.jpeg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;曾经做过游戏开发，后来从事家装开发，目前专注于渲染和AI技术。
+本人热衷于将渲染和AI运用到BIM上，通过技术扩展BIM在家装方面的运用。 当然想聊聊CG或游戏相关技术也没问题😄。
+欢迎大家留言或邮件交流。
+您也可以关注我的公众号：愚头的技术分享，谢谢。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/about-me/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>UE4新插件 - ZipPlatformFile</title>
+      <link>https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/</link>
+      <pubDate>Sat, 17 Jul 2021 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/</guid>
+      <image>https://jixing.ink//images/new-ue4-plugin-zipplatformfile.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/new-ue4-plugin-zipplatformfile.jpg&#34; title=&#34;/images/new-ue4-plugin-zipplatformfile.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;这是一个在内存中解压和加载&lt;code&gt;.zip&lt;/code&gt;文件的插件，完全不占用磁盘，支持密码解压，支持蓝图方法，支持自定义挂载点，支持加载&lt;code&gt;.uasset&lt;/code&gt;等资源。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和效果测试 - 2021.04.28 降噪与抗锯齿</title>
+      <link>https://jixing.ink/posts/xihe-test-20210428/</link>
+      <pubDate>Wed, 28 Apr 2021 11:36:03 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20210428/</guid>
+      <image>https://jixing.ink//images/xihe-test-20210428.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20210428.jpg&#34; title=&#34;/images/xihe-test-20210428.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“羲和”项目进行了重构，后续会介绍重构内容。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20210428/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>想编译UE4？请不要安装免费版IncrediBuild！</title>
+      <link>https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/</link>
+      <pubDate>Wed, 10 Mar 2021 13:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/</guid>
+      <image>https://jixing.ink//images/dont-install-free-version-of-incredibuild-for-ue4.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/dont-install-free-version-of-incredibuild-for-ue4.jpg&#34; title=&#34;/images/dont-install-free-version-of-incredibuild-for-ue4.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;IncrediBuild是一个很棒的分布式编译工具，对于编译UE4有很好的加速作用，但是不要使用免费版去编译UE4，因为、、、&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED”</title>
+      <link>https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/</link>
+      <pubDate>Wed, 10 Mar 2021 09:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/</guid>
+      <image>https://jixing.ink//images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg&#34; title=&#34;/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近在做UE4.26插件时遇到了一个奇怪的渲染崩溃问题。在编辑器模式下，这个插件会自动生成上百个&lt;strong&gt;StaticMesh&lt;/strong&gt;资源，但是生成到190个左右时就会崩溃。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>修复UE4在macOS Big Sur上的编译问题</title>
+      <link>https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/</link>
+      <pubDate>Sat, 19 Dec 2020 22:15:55 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/</guid>
+      <image>https://jixing.ink//images/ue4-macos-bigsur.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/ue4-macos-bigsur.jpg&#34; title=&#34;/images/ue4-macos-bigsur.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;如何处理除了UE4.26（最新版），其它老版本的引擎在macOS Big Sur上都会出现的编译问题？&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</title>
+      <link>https://jixing.ink/posts/xihe-test-20201124/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20201124/</guid>
+      <image>https://jixing.ink//images/xihe-test-20201124.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201124.jpg&#34; title=&#34;/images/xihe-test-20201124.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
+注意：左侧玻璃球是空心，而右侧玻璃球是实心。
+   Albedo Normal          通过以上三个图得到的降噪结果：
+另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
+ 这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
+下图是一张高采样图(~10m)，未使用降噪。
+ 更多：
+   采样 降噪             相关场景模型取自The Breakfast Room(License: CC-BY)     &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和效果测试 - 2020.11.20</title>
+      <link>https://jixing.ink/posts/xihe-test-20201120/</link>
+      <pubDate>Fri, 20 Nov 2020 12:26:57 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20201120/</guid>
+      <image>https://jixing.ink//images/xihe-test-20201120.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201120.jpg&#34; title=&#34;/images/xihe-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
+结果 加入天光的效果：
+接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和效果测试 - 2020.11.11 (后续)</title>
+      <link>https://jixing.ink/posts/xihe-test-20201119/</link>
+      <pubDate>Thu, 19 Nov 2020 23:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20201119/</guid>
+      <image>https://jixing.ink//images/xihe-test-20201119.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201119.jpg&#34; title=&#34;/images/xihe-test-20201119.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 在上次测试比对后又改动了一些关键点，下面是重新渲染后的结果。
+比对 羲和效果    是否降噪 渲染时长 反弹次数 采样次数     否 56s 8 520    Blender的Cycles效果    是否降噪 渲染时长 反弹次数 采样次数     否 62s 8 32    总结 可以看到与上次相比两者更加接近，主要的修改是：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201119/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和效果测试 - 2020.11.11</title>
+      <link>https://jixing.ink/posts/xihe-test-20201111/</link>
+      <pubDate>Wed, 11 Nov 2020 22:59:31 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20201111/</guid>
+      <image>https://jixing.ink//images/xihe-test-20201111.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201111.jpg&#34; title=&#34;/images/xihe-test-20201111.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
+ 墙面和球体：使用漫反射材质 大方块：金属度为0，而光滑度为1，类似于一款瓷砖 小方块：金属度为1，而光滑度为1，即是一块纯金属  比对 此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。
+羲和效果    是否降噪 渲染时长 反弹次数 采样次数     否 87s 8 520    Blender的Cycles效果    是否降噪 渲染时长 反弹次数 采样次数     否 87s 8 32    总结 个人认为已经接近Blender的Cycles渲染效果😃。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201111/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>个人笔记 - 2020.11.08</title>
+      <link>https://jixing.ink/posts/personal-note-20201108/</link>
+      <pubDate>Sun, 08 Nov 2020 10:57:17 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/personal-note-20201108/</guid>
+      <description>&lt;p&gt;SYCL 这是一个针对高性能计算的抽象层，基于标准的C++语言，规范了并行计算的C++接口，在编译阶段针对不同设备进行并行加速。 例如，对于CPU使用OpenMP进行加速，对NVIDIA的GPU利用CUDA或OpenCL+SPIR进行加速，对AMD的GPU则利用ROCm或OpenCL+SPIR进行加速。 这样最明显的好处是同一套代码，可以充分利用不同的设备来实现高性能计算。
+对于最近几年大热的机器学习和光线追踪来讲，完全可以利用这个技术写一套代码来实现跨设备和平台😄（是真的吗？）。
+   实现 介绍     oneAPI DPC++ 由Intel实现的SYCL，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请Intel的DevCloud直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。   ComputeCPP 这是一个实现最完善的SYCL，由Codeplay Software Ltd.开发，并且已经商用。   triSYCL 开源项目，由Xilinx开发，就是最近被AMD收购的那家公司。   hipSYCL 开源项目，由德国Heidelberg大学的HPC技术专家Alpay Aksel主导开发。    相关文章和项目  SYCL官方资源 SYCL技术站（Codeplay Software Ltd.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/personal-note-20201108/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和开发日志（四） 射灯</title>
+      <link>https://jixing.ink/posts/xihe-development-log-4-spot-light/</link>
+      <pubDate>Sat, 07 Nov 2020 12:19:41 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-development-log-4-spot-light/</guid>
+      <image>https://jixing.ink//images/xihe-result-light-spot.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-spot.jpg&#34; title=&#34;/images/xihe-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
+相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角  对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到    效果展示 半径与内外角 半径为0cm，外角60度，内角60度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和开发日志（三） 点光</title>
+      <link>https://jixing.ink/posts/xihe-development-log-3-point-light/</link>
+      <pubDate>Fri, 06 Nov 2020 21:02:36 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-development-log-3-point-light/</guid>
+      <image>https://jixing.ink//images/xihe-result-light-point.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-point.jpg&#34; title=&#34;/images/xihe-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径  用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图    效果展示 颜色、强度和位置是常识，这里就不进行展示。
+半径  通过影子柔和程度可以看出点光半径的大小&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和开发日志（二） 平行光</title>
+      <link>https://jixing.ink/posts/xihe-development-log-2-direction-light/</link>
+      <pubDate>Tue, 03 Nov 2020 10:12:39 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-development-log-2-direction-light/</guid>
+      <image>https://jixing.ink//images/xihe-result-light-direction.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-direction.jpg&#34; title=&#34;/images/xihe-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
+平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
+相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角  即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示    效果展示 颜色、强度和方向是常识，这里就不进行展示。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和开发日志（一） 介绍</title>
+      <link>https://jixing.ink/posts/xihe-development-log-1-intro/</link>
+      <pubDate>Wed, 28 Oct 2020 22:24:05 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-development-log-1-intro/</guid>
+      <image>https://jixing.ink//images/xihe-intro.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-intro.jpg&#34; title=&#34;/images/xihe-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
+关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+ 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
+本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
+不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
+渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
+  OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。   Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
+Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

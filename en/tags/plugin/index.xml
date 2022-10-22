@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plugin on Xing Ji&#39;s Blog</title>
+    <link>https://jixing.ink/en/tags/plugin/</link>
+    <description>Recent content in Plugin on Xing Ji&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>jixing@jixing.ink (Xing Ji)</managingEditor>
+    <webMaster>jixing@jixing.ink (Xing Ji)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Sat, 17 Jul 2021 22:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/en/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New UE4 Plugin - ZipPlatformFile</title>
+      <link>https://jixing.ink/en/posts/new-ue4-plugin-zipplatformfile/</link>
+      <pubDate>Sat, 17 Jul 2021 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (Xing Ji)</author>
+      <guid>https://jixing.ink/en/posts/new-ue4-plugin-zipplatformfile/</guid>
+      <image>https://jixing.ink//images/new-ue4-plugin-zipplatformfile.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/new-ue4-plugin-zipplatformfile.jpg&#34; title=&#34;/images/new-ue4-plugin-zipplatformfile.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;This is a UE4 plugin that can unzip a &lt;code&gt;.zip&lt;/code&gt; file in memory without disk, supports the password, blueprint functions, the mount point, load the &lt;code&gt;.uasset&lt;/code&gt; file.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/en/posts/new-ue4-plugin-zipplatformfile/&#34;&gt;Read more…&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

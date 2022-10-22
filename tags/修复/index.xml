@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>修复 on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/%E4%BF%AE%E5%A4%8D/</link>
+    <description>Recent content in 修复 on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Sat, 19 Dec 2020 22:15:55 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E4%BF%AE%E5%A4%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复UE4在macOS Big Sur上的编译问题</title>
+      <link>https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/</link>
+      <pubDate>Sat, 19 Dec 2020 22:15:55 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/</guid>
+      <image>https://jixing.ink//images/ue4-macos-bigsur.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/ue4-macos-bigsur.jpg&#34; title=&#34;/images/ue4-macos-bigsur.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;如何处理除了UE4.26（最新版），其它老版本的引擎在macOS Big Sur上都会出现的编译问题？&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

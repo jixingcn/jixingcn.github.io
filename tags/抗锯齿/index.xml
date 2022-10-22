@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>抗锯齿 on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/%E6%8A%97%E9%94%AF%E9%BD%BF/</link>
+    <description>Recent content in 抗锯齿 on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Wed, 28 Apr 2021 11:36:03 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E6%8A%97%E9%94%AF%E9%BD%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羲和效果测试 - 2021.04.28 降噪与抗锯齿</title>
+      <link>https://jixing.ink/posts/xihe-test-20210428/</link>
+      <pubDate>Wed, 28 Apr 2021 11:36:03 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/xihe-test-20210428/</guid>
+      <image>https://jixing.ink//images/xihe-test-20210428.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20210428.jpg&#34; title=&#34;/images/xihe-test-20210428.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“羲和”项目进行了重构，后续会介绍重构内容。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20210428/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>
