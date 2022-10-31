@@ -2,7 +2,6 @@ User-agent: *
 
 
 Allow: /pages/xihe/
-Allow: /pages/bimpp/
 Allow: /pages/about-me/
 Allow: /categories/
 Allow: /posts/
@@ -79,5 +78,3 @@ Allow: /posts/xihe-development-log-2-direction-light/
 Allow: /tags/mdl/
 Allow: /tags/optix/
 Allow: /posts/xihe-development-log-1-intro/
-Allow: /tags/bim/
-Allow: /tags/%E6%89%A9%E5%B1%95/

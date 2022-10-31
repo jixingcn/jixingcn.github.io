@@ -10,13 +10,6 @@
   </url>
   
   <url>
-    <loc>https://jixing.ink/pages/bimpp/</loc>
-    <lastmod>2020-10-17T11:15:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jixing.ink/pages/about-me/</loc>
     <lastmod>2020-09-01T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -634,20 +627,6 @@
   <url>
     <loc>https://jixing.ink/posts/xihe-development-log-1-intro/</loc>
     <lastmod>2020-10-28T22:24:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/tags/bim/</loc>
-    <lastmod>2020-10-17T11:15:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/tags/%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2020-10-17T11:15:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
