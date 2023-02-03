@@ -1,7 +1,7 @@
 User-agent: *
 
 
-Allow: /pages/xihe/
+Allow: /pages/xihe-renderer/
 Allow: /pages/about-me/
 Allow: /categories/
 Allow: /posts/
@@ -37,7 +37,6 @@ Allow: /tags/%E4%BF%AE%E5%A4%8D/
 Allow: /posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/
 Allow: /tags/dlss/
 Allow: /pages/
-Allow: /tags/%E4%BA%91%E7%AB%AF/
 Allow: /tags/%E4%BB%8B%E7%BB%8D/
 Allow: /tags/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/
 Allow: /tags/%E5%8D%8A%E9%80%8F%E6%98%8E/

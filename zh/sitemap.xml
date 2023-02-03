@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jixing.ink/pages/xihe/</loc>
+    <loc>https://jixing.ink/pages/xihe-renderer/</loc>
     <lastmod>2020-11-24T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -342,13 +342,6 @@
                 hreflang="zh"
                 href="https://jixing.ink/pages/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/tags/%E4%BA%91%E7%AB%AF/</loc>
-    <lastmod>2020-11-24T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
