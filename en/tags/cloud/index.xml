@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on Xing Ji&#39;s Blog</title>
+    <link>https://jixing.ink/en/tags/cloud/</link>
+    <description>Recent content in Cloud on Xing Ji&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>jixing@jixing.ink (Xing Ji)</managingEditor>
+    <webMaster>jixing@jixing.ink (Xing Ji)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Fri, 03 Feb 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/en/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XiHe</title>
+      <link>https://jixing.ink/en/pages/xihe/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (Xing Ji)</author>
+      <guid>https://jixing.ink/en/pages/xihe/</guid>
+      <description>&lt;p&gt;Welcome This is a private renderer cloud project. Let&amp;rsquo;s talk in Discord.
+More information is coming&amp;hellip;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/en/pages/xihe/&#34;&gt;Read more…&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

@@ -1,11 +1,7 @@
 <!doctype html>
-
 <html lang="zh">
-
 <head>
-  
   <title>记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED” | 愚头的技术分享</title>
-  
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
@@ -43,18 +39,13 @@
     })(window, document, "clarity", "script", "4m90jvz7md");
 </script>
 </head>
-
 <body>
   <div id="container">
     <header>
       <h1>
         <a href="/">愚头的技术分享</a>
       </h1>
-
       <ul id="social-media">
-        
-        
-        
         
         
         
@@ -74,9 +65,6 @@
               aria-hidden="true"></i></a></li>
         
         
-        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
-              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
         
@@ -94,6 +82,12 @@
     
 <nav id="TableOfMain">
     <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
         
         <li>
             <a class="" href="/pages/xihe-renderer/">
@@ -238,14 +232,14 @@ Script Stack (0 frames):
 </code></pre><p>此时的显存占用也比较高：</p>
 <p><img src="/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4-gpudevice.jpg" alt="gpu device"></p>
 <p><em>现在还在用GTX 960M？可怜一下我的GPU😟</em></p>
-<p>切换到<strong>DebugGame Editor</strong>模式下进行测试，每次都会在<a href="https://github.com/EpicGames/UnrealEngine/blob/5df54b7ef1714f28fb5da319c3e83d96f0bedf08/Engine/Source/Runtime/Windows/D3D11RHI/Private/D3D11Util.cpp#L202">这行中断(Github)</a>：</p>
+<p>切换到<strong>DebugGame Editor</strong>模式下进行测试，每次都会在<a href="https://github.com/EpicGames/UnrealEngine/blob/5df54b7ef1714f28fb5da319c3e83d96f0bedf08/Engine/Source/Runtime/Windows/D3D11RHI/Private/D3D11Util.cpp#L202" target="_blank" rel="noopener">这行中断(Github)</a>：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">UE_LOG(LogD3D11RHI, Fatal, TEXT(<span style="color:#e6db74">&#34;Unreal Engine is exiting due to D3D device being lost. D3D device was not available to assertain DXGI cause.&#34;</span>));
 </code></pre></div><p>从上下文看，的确是GPU设备丢失导致运行到这里，但是网上查到的原因很多很难定位，所以还是回到日志里去查。与渲染相关的日志里会出现了这样的<strong>ErrorCode</strong>：</p>
 <pre><code class="language-log" data-lang="log">[2021.03.09-11.59.13:452][446]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s) (ErrorCode 00000001) (00000000)
 [2021.03.09-11.59.13:953][446]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s) (ErrorCode 00000001) (00000000)
 [2021.03.09-11.59.14:483][446]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s) (ErrorCode 00000001) (00000000)
 [2021.03.09-11.59.14:982][446]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
-</code></pre><p>早在2018年的<a href="https://forums.tomshardware.com/threads/dx11-timed-out-while-waiting-for-gpu-to-catch-up.3278426/">这篇文章</a>中就出现了同样的问题，然后是<a href="https://steamcommunity.com/app/16900/discussions/1/1640917832748442812/">Steam社区的文章</a>(<em>需梯子</em>)以及<a href="https://appuals.com/how-to-fix-the-error-unreal-engine-is-exiting-due-to-d3d-device-being-lost/">How to Fix the Error ‘Unreal Engine is exiting due to D3D device being lost’</a>。最后一篇最为详细，按照文中所描述的步骤来测试，发现<strong>只要将集显禁用掉就没有问题了，其它步骤可以跳过</strong>。😄</p>
+</code></pre><p>早在2018年的<a href="https://forums.tomshardware.com/threads/dx11-timed-out-while-waiting-for-gpu-to-catch-up.3278426/" target="_blank" rel="noopener">这篇文章</a>中就出现了同样的问题，然后是<a href="https://steamcommunity.com/app/16900/discussions/1/1640917832748442812/" target="_blank" rel="noopener">Steam社区的文章</a>(<em>需梯子</em>)以及<a href="https://appuals.com/how-to-fix-the-error-unreal-engine-is-exiting-due-to-d3d-device-being-lost/" target="_blank" rel="noopener">How to Fix the Error ‘Unreal Engine is exiting due to D3D device being lost’</a>。最后一篇最为详细，按照文中所描述的步骤来测试，发现<strong>只要将集显禁用掉就没有问题了，其它步骤可以跳过</strong>。😄</p>
 <p>至此我的插件可以正确运行了🤓，但是问题仍然存在：<strong>不知道是UE4的问题还是显卡驱动的问题？</strong> <em>不过现在要赶紧把插件搞好了🤑，待后续有空了再解决。</em></p>
 <h2 id="总结">总结</h2>
 <p>该问题：</p>
@@ -297,31 +291,9 @@ Script Stack (0 frames):
 
 </main>
     <footer>
-        <h6>| 版权所有 2020 - 2023，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+        <h6>| 版权所有 2023@XingJi，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
     </footer>
 </div>
-<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-182236447-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
 
 <div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
     
@@ -333,5 +305,17 @@ if (!doNotTrack) {
     </a>
     
 </div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script type="application/javascript">var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; ga('create', 'UA-182236447-1', 'auto'); ga('send', 'pageview'); }</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02RP1LHEKB"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-02RP1LHEKB');</script>
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </body>
 </html>

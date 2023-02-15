@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>渲染器 on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93%E5%99%A8/</link>
+    <description>Recent content in 渲染器 on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Fri, 03 Feb 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E6%B8%B2%E6%9F%93%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羲和</title>
+      <link>https://jixing.ink/pages/xihe/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/pages/xihe/</guid>
+      <description>&lt;p&gt;欢迎 这是一个私有渲染云项目。欢迎加入Discord，让我们一起探讨。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

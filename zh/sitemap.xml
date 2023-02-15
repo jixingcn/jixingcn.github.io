@@ -3,6 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jixing.ink/pages/xihe/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/pages/xihe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/pages/xihe/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jixing.ink/pages/xihe-renderer/</loc>
     <lastmod>2020-11-24T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -28,7 +45,7 @@
   
   <url>
     <loc>https://jixing.ink/categories/</loc>
-    <lastmod>2021-07-17T22:00:00+08:00</lastmod>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -41,6 +58,92 @@
                 hreflang="zh"
                 href="https://jixing.ink/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/pages/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/pages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/pages/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/tags/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/tags/%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93%E5%99%A8/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</loc>
+    <lastmod>2023-02-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -57,23 +160,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://jixing.ink/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/tags/</loc>
-    <lastmod>2021-07-17T22:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jixing.ink/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://jixing.ink/tags/"
                 />
   </url>
   
@@ -125,23 +211,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://jixing.ink/tags/unzip/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/</loc>
-    <lastmod>2021-07-17T22:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jixing.ink/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://jixing.ink/"
                 />
   </url>
   
@@ -265,13 +334,6 @@
   </url>
   
   <url>
-    <loc>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</loc>
-    <lastmod>2021-03-10T09:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jixing.ink/tags/%E7%8B%AC%E6%98%BE/</loc>
     <lastmod>2021-03-10T09:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -328,30 +390,6 @@
   </url>
   
   <url>
-    <loc>https://jixing.ink/pages/</loc>
-    <lastmod>2020-11-24T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jixing.ink/en/pages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://jixing.ink/pages/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/tags/%E4%BB%8B%E7%BB%8D/</loc>
-    <lastmod>2020-11-24T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jixing.ink/tags/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/</loc>
     <lastmod>2020-11-24T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -395,13 +433,6 @@
   
   <url>
     <loc>https://jixing.ink/posts/xihe-test-20201124/</loc>
-    <lastmod>2020-11-24T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</loc>
     <lastmod>2020-11-24T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

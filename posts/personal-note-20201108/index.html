@@ -1,11 +1,7 @@
 <!doctype html>
-
 <html lang="zh">
-
 <head>
-  
   <title>个人笔记 - 2020.11.08 | 愚头的技术分享</title>
-  
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
@@ -47,18 +43,13 @@
     })(window, document, "clarity", "script", "4m90jvz7md");
 </script>
 </head>
-
 <body>
   <div id="container">
     <header>
       <h1>
         <a href="/">愚头的技术分享</a>
       </h1>
-
       <ul id="social-media">
-        
-        
-        
         
         
         
@@ -78,9 +69,6 @@
               aria-hidden="true"></i></a></li>
         
         
-        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
-              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
         
@@ -98,6 +86,12 @@
     
 <nav id="TableOfMain">
     <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
         
         <li>
             <a class="" href="/pages/xihe-renderer/">
@@ -179,7 +173,7 @@
 
     
 
-    <div class="article-content"><h2 id="sycl"><a href="https://www.khronos.org/sycl">SYCL</a></h2>
+    <div class="article-content"><h2 id="sycl"><a href="https://www.khronos.org/sycl" target="_blank" rel="noopener">SYCL</a></h2>
 <p><img src="https://www.khronos.org/assets/uploads/apis/2020-05-sycl-landing-page-01_2.jpg" alt="About SYCL"></p>
 <p>这是一个针对高性能计算的抽象层，基于标准的C++语言，规范了并行计算的C++接口，在编译阶段针对不同设备进行并行加速。
 例如，对于CPU使用OpenMP进行加速，对NVIDIA的GPU利用CUDA或OpenCL+SPIR进行加速，对AMD的GPU则利用ROCm或OpenCL+SPIR进行加速。
@@ -195,36 +189,36 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/intel/llvm/tree/sycl">oneAPI DPC++</a></td>
-<td>由<a href="https://intel.com">Intel</a>实现的<a href="https://www.khronos.org/sycl">SYCL</a>，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请<a href="https://devcloud.intel.com/oneapi/">Intel的DevCloud</a>直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。</td>
+<td><a href="https://github.com/intel/llvm/tree/sycl" target="_blank" rel="noopener">oneAPI DPC++</a></td>
+<td>由<a href="https://intel.com" target="_blank" rel="noopener">Intel</a>实现的<a href="https://www.khronos.org/sycl" target="_blank" rel="noopener">SYCL</a>，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请<a href="https://devcloud.intel.com/oneapi/" target="_blank" rel="noopener">Intel的DevCloud</a>直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。</td>
 </tr>
 <tr>
-<td><a href="http://developer.codeplay.com/">ComputeCPP</a></td>
-<td>这是一个实现最完善的SYCL，由<a href="https://codeplay.com/">Codeplay Software Ltd.</a>开发，并且已经商用。</td>
+<td><a href="http://developer.codeplay.com/" target="_blank" rel="noopener">ComputeCPP</a></td>
+<td>这是一个实现最完善的SYCL，由<a href="https://codeplay.com/" target="_blank" rel="noopener">Codeplay Software Ltd.</a>开发，并且已经商用。</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triSYCL/triSYCL">triSYCL</a></td>
+<td><a href="https://github.com/triSYCL/triSYCL" target="_blank" rel="noopener">triSYCL</a></td>
 <td>开源项目，由Xilinx开发，就是最近被AMD收购的那家公司。</td>
 </tr>
 <tr>
-<td><a href="https://github.com/illuhad/hipSYCL">hipSYCL</a></td>
-<td>开源项目，由德国Heidelberg大学的HPC技术专家<a href="https://emcl.iwr.uni-heidelberg.de/people/alpay-aksel">Alpay Aksel</a>主导开发。</td>
+<td><a href="https://github.com/illuhad/hipSYCL" target="_blank" rel="noopener">hipSYCL</a></td>
+<td>开源项目，由德国Heidelberg大学的HPC技术专家<a href="https://emcl.iwr.uni-heidelberg.de/people/alpay-aksel" target="_blank" rel="noopener">Alpay Aksel</a>主导开发。</td>
 </tr>
 </tbody>
 </table>
 <h3 id="相关文章和项目">相关文章和项目</h3>
 <ul>
-<li><a href="https://www.khronos.org/sycl/resources">SYCL官方资源</a></li>
-<li><a href="https://sycl.tech/">SYCL技术站（Codeplay Software Ltd.开发）</a></li>
-<li><a href="https://github.com/ville-k/sycl_starter">SYCL &amp; Eigen Starter Project</a></li>
-<li><a href="https://www.codeplay.com/portal/blogs/2020/05/19/ray-tracing-in-a-weekend-with-sycl-basic-sphere-tracing.html">Ray-tracing in a Weekend with SYCL: Basic sphere tracing</a></li>
-<li><a href="https://github.com/GoogleBot42/Tracer">A portable GPU path Tracer library running powered by SYCL. (OpenCL/CUDA/OpenMP)</a></li>
-<li><a href="https://github.com/KhronosGroup/SyclParallelSTL">SYCL版STL</a></li>
-<li><a href="https://github.com/codeplaysoftware/SYCL-DNN">SYCL版神经网络运算库</a></li>
-<li><a href="https://github.com/codeplaysoftware/SYCL-ML">SYCL版经典机器学习算法</a></li>
-<li><a href="https://github.com/codeplaysoftware/tensorflow">SYCL版Tensorflow</a></li>
+<li><a href="https://www.khronos.org/sycl/resources" target="_blank" rel="noopener">SYCL官方资源</a></li>
+<li><a href="https://sycl.tech/" target="_blank" rel="noopener">SYCL技术站（Codeplay Software Ltd.开发）</a></li>
+<li><a href="https://github.com/ville-k/sycl_starter" target="_blank" rel="noopener">SYCL &amp; Eigen Starter Project</a></li>
+<li><a href="https://www.codeplay.com/portal/blogs/2020/05/19/ray-tracing-in-a-weekend-with-sycl-basic-sphere-tracing.html" target="_blank" rel="noopener">Ray-tracing in a Weekend with SYCL: Basic sphere tracing</a></li>
+<li><a href="https://github.com/GoogleBot42/Tracer" target="_blank" rel="noopener">A portable GPU path Tracer library running powered by SYCL. (OpenCL/CUDA/OpenMP)</a></li>
+<li><a href="https://github.com/KhronosGroup/SyclParallelSTL" target="_blank" rel="noopener">SYCL版STL</a></li>
+<li><a href="https://github.com/codeplaysoftware/SYCL-DNN" target="_blank" rel="noopener">SYCL版神经网络运算库</a></li>
+<li><a href="https://github.com/codeplaysoftware/SYCL-ML" target="_blank" rel="noopener">SYCL版经典机器学习算法</a></li>
+<li><a href="https://github.com/codeplaysoftware/tensorflow" target="_blank" rel="noopener">SYCL版Tensorflow</a></li>
 </ul>
-<h2 id="opencascade发布新版75httpswwwopencascadecomopen-cascade-technology-7-5-0-released"><a href="https://www.opencascade.com/open-cascade-technology-7-5-0-released/">OpenCASCADE发布新版7.5</a></h2>
+<h2 id="opencascade发布新版75httpswwwopencascadecomopen-cascade-technology-7-5-0-released"><a href="https://www.opencascade.com/open-cascade-technology-7-5-0-released/" target="_blank" rel="noopener">OpenCASCADE发布新版7.5</a></h2>
 <p>从新版介绍来看，此次更新变化较多，有超过400个改进和修正。
 另外，有一段时间没有访问官网，发现有了很大变化，变得更靓丽了。</p>
 <p>有如下关键更新（仅列出个人认为的重点）：</p>
@@ -368,31 +362,9 @@
 
 </main>
     <footer>
-        <h6>| 版权所有 2020 - 2023，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+        <h6>| 版权所有 2023@XingJi，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
     </footer>
 </div>
-<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-182236447-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
 
 <div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
     
@@ -404,5 +376,17 @@ if (!doNotTrack) {
     </a>
     
 </div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script type="application/javascript">var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; ga('create', 'UA-182236447-1', 'auto'); ga('send', 'pageview'); }</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02RP1LHEKB"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-02RP1LHEKB');</script>
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </body>
 </html>

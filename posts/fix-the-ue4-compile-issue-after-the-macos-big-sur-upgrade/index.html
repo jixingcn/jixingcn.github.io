@@ -1,11 +1,7 @@
 <!doctype html>
-
 <html lang="zh">
-
 <head>
-  
   <title>修复UE4在macOS Big Sur上的编译问题 | 愚头的技术分享</title>
-  
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
@@ -43,18 +39,13 @@
     })(window, document, "clarity", "script", "4m90jvz7md");
 </script>
 </head>
-
 <body>
   <div id="container">
     <header>
       <h1>
         <a href="/">愚头的技术分享</a>
       </h1>
-
       <ul id="social-media">
-        
-        
-        
         
         
         
@@ -74,9 +65,6 @@
               aria-hidden="true"></i></a></li>
         
         
-        <li><a target="_blank" href="https://www.linkedin.com/in/jixingcn"><i
-              class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
         
@@ -94,6 +82,12 @@
     
 <nav id="TableOfMain">
     <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
         
         <li>
             <a class="" href="/pages/xihe-renderer/">
@@ -190,10 +184,10 @@
 
     <div class="article-content"><h2 id="发现问题">发现问题</h2>
 <p>一个月前打开我的macmini想着升级一下里面的软件，发现可以安装Big Sur了。一时兴起就把能更新的都更新了。经过漫长的安装后，稍微使用了一下Big Sur，感觉怎么那么像iOS？当然我使用的主要目的是为了检查这个打包机的编译环境还是否正常，发现没有什么问题就关机睡觉了。</p>
-<p>几天后我对UE4插件<a href="https://github.com/code4game/glTFForUE4">glTF for UE4</a>进行了一些修改，就在我准备发布时打包出错了，而且只是UE4.24和4.25的macOS下，提示的内容是“无法找到<code>/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport</code>”，在系统中的确不存在此文件或目录。由于对macOS开发不是很熟悉所以过了几天都没有找到问题，最后决定放弃对4.24和4.25的macOS支持。</p>
-<p>最近插件修复了一些问题，又准备要更新了。再次看到macOS上的打包问题，决定这次一定要解决掉。在网上经过一番查找发现很早之前就已经有人遇到了这个问题并在<a href="https://developer.apple.com/forums/thread/653972">Apple开发者论坛上提出</a>，不过最近才有人提供了解决方案。而令我惊喜的是解决方案居然是借用UE4.26的一次提交，这个方案不正是我想要的吗。</p>
+<p>几天后我对UE4插件<a href="https://github.com/code4game/glTFForUE4" target="_blank" rel="noopener">glTF for UE4</a>进行了一些修改，就在我准备发布时打包出错了，而且只是UE4.24和4.25的macOS下，提示的内容是“无法找到<code>/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport</code>”，在系统中的确不存在此文件或目录。由于对macOS开发不是很熟悉所以过了几天都没有找到问题，最后决定放弃对4.24和4.25的macOS支持。</p>
+<p>最近插件修复了一些问题，又准备要更新了。再次看到macOS上的打包问题，决定这次一定要解决掉。在网上经过一番查找发现很早之前就已经有人遇到了这个问题并在<a href="https://developer.apple.com/forums/thread/653972" target="_blank" rel="noopener">Apple开发者论坛上提出</a>，不过最近才有人提供了解决方案。而令我惊喜的是解决方案居然是借用UE4.26的一次提交，这个方案不正是我想要的吗。</p>
 <h2 id="解决方法">解决方法</h2>
-<p>根据<a href="https://github.com/EpicGames/UnrealEngine/commit/1d252ee345cdf6c232b20c3b4bf14f13bb569c9d">UE官方提交的代码</a>对4.24和4.25进行修改：</p>
+<p>根据<a href="https://github.com/EpicGames/UnrealEngine/commit/1d252ee345cdf6c232b20c3b4bf14f13bb569c9d" target="_blank" rel="noopener">UE官方提交的代码</a>对4.24和4.25进行修改：</p>
 <p>将引擎目录下<code>Engine/Source/Runtime/ApplicationCore/ApplicationCore.Build.cs</code>和<code>Engine/Source/Runtime/Core/Core.Build.cs</code>两个文件中：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">PublicAdditionalLibraries.Add(<span style="color:#e6db74">&#34;/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport&#34;</span>);
 </code></pre></div><p>替换成</p>
@@ -202,7 +196,7 @@ PublicAdditionalLibraries.Add(SDKROOT <span style="color:#f92672">+</span> <span
 </code></pre></div><p>即可。</p>
 <h2 id="总结">总结</h2>
 <p>这下终于明白了为什么4.26正常但4.24和4.25出错，因为Big Sur对一些开发库的目录进行了变更，而只有最新的4.26对此变更进行了修复。其实UE4除了4.25和4.24存在该错误，其它版本肯定也存在相同的问题，因为之前的引擎版本在调用<code>MultitouchSupport</code>库时都使用了固定的目录😕，这样才导致系统更新后打包失败。我想UE官方也不会就此更新老版引擎了，所以写此篇文章提供解决方案。</p>
-<p>另外，推荐大家使用<a href="https://github.com/code4game/glTFForUE4">glTF for UE4</a>来导入<a href="https://khronos.org/gltf">glTF</a>文件，因为它与官方那个<a href="https://khronos.org/gltf">glTF</a>导入插件比起来要更好用更稳定👍。同时也欢迎大家提意见，交流一下使用感受和想法。</p>
+<p>另外，推荐大家使用<a href="https://github.com/code4game/glTFForUE4" target="_blank" rel="noopener">glTF for UE4</a>来导入<a href="https://khronos.org/gltf" target="_blank" rel="noopener">glTF</a>文件，因为它与官方那个<a href="https://khronos.org/gltf" target="_blank" rel="noopener">glTF</a>导入插件比起来要更好用更稳定👍。同时也欢迎大家提意见，交流一下使用感受和想法。</p>
 </div>
 
     
@@ -245,31 +239,9 @@ PublicAdditionalLibraries.Add(SDKROOT <span style="color:#f92672">+</span> <span
 
 </main>
     <footer>
-        <h6>| 版权所有 2020 - 2023，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+        <h6>| 版权所有 2023@XingJi，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
     </footer>
 </div>
-<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-182236447-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
 
 <div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
     
@@ -281,5 +253,17 @@ if (!doNotTrack) {
     </a>
     
 </div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script type="application/javascript">var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; ga('create', 'UA-182236447-1', 'auto'); ga('send', 'pageview'); }</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02RP1LHEKB"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-02RP1LHEKB');</script>
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </body>
 </html>
