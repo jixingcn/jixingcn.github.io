@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>StaticMeshDescription on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/staticmeshdescription/</link>
+    <description>Recent content in StaticMeshDescription on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Thu, 24 Feb 2022 10:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/staticmeshdescription/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>运行时创建UStaticMesh要注意的两点</title>
+      <link>https://jixing.ink/posts/tips-create-staticmesh-in-runtime/</link>
+      <pubDate>Thu, 24 Feb 2022 10:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/tips-create-staticmesh-in-runtime/</guid>
+      <image>https://jixing.ink//images/tips-create-staticmesh-in-runtime.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/tips-create-staticmesh-in-runtime.jpg&#34; title=&#34;/images/tips-create-staticmesh-in-runtime.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;运行时创建UStaticMesh是必不可少的需求，但是在创建过程中有这么两点需要特别注意：处理单模型多材质和注册静态模型属性。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/tips-create-staticmesh-in-runtime/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>
