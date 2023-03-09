@@ -9,14 +9,15 @@
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
     <webMaster>jixing@jixing.ink (纪星)</webMaster>
     <copyright>版权所有，转发请附原始链接</copyright>
-    <lastBuildDate>Fri, 03 Feb 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 09:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>羲和</title>
       <link>https://jixing.ink/pages/xihe/</link>
       <pubDate>Fri, 03 Feb 2023 00:00:00 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
       <guid>https://jixing.ink/pages/xihe/</guid>
-      <description>&lt;p&gt;欢迎 这是一个私有渲染云项目。欢迎加入Discord，让我们一起探讨。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;欢迎 这是一个私有渲染云项目。欢迎加入 Discord，让我们一起探讨。
+开发正在进行中，很快就有更多消息，请耐心等待。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
@@ -39,6 +40,16 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.png&#34; title=&#34;images/5e13a51a9c71fb03f12b67a2852027a2.png&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;曾经做过游戏，后来从事家装和GIS研发，目前专注于渲染和AI技术。
 热衷于将渲染和AI运用到BIM上，通过技术扩展BIM在家装方面的运用。 当然想聊聊CG或游戏相关技术也没问题😄。
 欢迎大家给我的文章留言或通过邮件交流。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/about-me/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml</title>
+      <link>https://jixing.ink/posts/false-positive-trojan-win32-sabsik/</link>
+      <pubDate>Thu, 09 Mar 2023 09:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/false-positive-trojan-win32-sabsik/</guid>
+      <image>https://jixing.ink//images/false-positive-trojan-win32-sabsik.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/false-positive-trojan-win32-sabsik.jpg&#34; title=&#34;/images/false-positive-trojan-win32-sabsik.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/false-positive-trojan-win32-sabsik/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>

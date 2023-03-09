@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <title>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml | 愚头的技术分享</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="纪星" /><meta property="og:title" content="编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml" />
+<meta property="og:description" content="最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/posts/false-positive-trojan-win32-sabsik/" />
+<meta property="article:published_time" content="2023-03-09T09:00:00+08:00" />
+<meta property="article:modified_time" content="2023-03-09T09:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml"/>
+<meta name="twitter:description" content="最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？"/>
+
+<meta name="generator" content="Hugo 0.68.3" />
+    
+  <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  
+  
+  <link rel="icon" type="image/png" href="https://s.gravatar.com/avatar/5e13a51a9c71fb03f12b67a2852027a2?s=80">
+  
+  
+  
+  
+
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "4m90jvz7md");
+</script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <a href="/">愚头的技术分享</a>
+      </h1>
+      <ul id="social-media">
+        
+        
+        
+        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="https://mp.weixin.qq.com/s/5fJIaoTSIhIMxhczQyo_oA"><i class="fab fa-weixin fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="mailto:jixing@jixing.ink"><i class="fas fa-envelope"
+              aria-hidden="true"></i></a></li>
+        
+        
+      </ul>
+      
+      <p><em>一位图形学爱好者的唠叨</em></p>
+      
+    </header>
+
+    
+<nav id="TableOfMain">
+    <ul>
+        
+        <li>
+            <a class="" href="/pages/xihe/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/xihe-renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/about-me/">
+                <i class="fa-li fa  fa-lg"></i><span>关于我</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+<article>
+
+    
+    
+    <image src="https://jixing.ink/images/false-positive-trojan-win32-sabsik.jpg"></image>
+    
+    
+
+    <h1>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml</h1>
+
+    
+        <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2023-03-09T09:00:00&#43;08:00">2023-03-09</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E9%97%AE%E9%A2%98">@问题</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/microsoft">#Microsoft</a>
+                
+                    , 
+                    <a href="/tags/defender">#Defender</a>
+                
+                    , 
+                    <a href="/tags/antivirus">#Antivirus</a>
+                
+                    , 
+                    <a href="/tags/virus">#Virus</a>
+                
+                    , 
+                    <a href="/tags/trojan">#Trojan</a>
+                
+                    , 
+                    <a href="/tags/false">#False</a>
+                
+                    , 
+                    <a href="/tags/windows">#Windows</a>
+                
+                    , 
+                    <a href="/tags/windows-sdk">#Windows SDK</a>
+                
+                    , 
+                    <a href="/tags/%E5%BE%AE%E8%BD%AF">#微软</a>
+                
+                    , 
+                    <a href="/tags/%E6%9D%80%E6%AF%92">#杀毒</a>
+                
+                    , 
+                    <a href="/tags/%E8%AF%AF%E6%8A%A5">#误报</a>
+                
+                    , 
+                    <a href="/tags/%E7%AD%BE%E5%90%8D">#签名</a>
+                
+                    , 
+                    <a href="/tags/%E5%85%8D%E8%B4%B9">#免费</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
+    </ul>
+</aside>
+
+    
+
+    
+
+    <div class="article-content"><p>最近将一个 Golang 编译的执行文件放到他人机器上执行，但是 Microsoft Defender Antivirus 认为该执行文件含有木门病毒 - <a href="https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Sabsik.TE.A!ml" target="_blank" rel="noopener">Trojan:Win32/Sabsik.TE.A!ml</a>，结果不但不能运行还被自动删除😢。</p>
+<p>那么对于这样的误报该如何处理？经过一番搜索后发现也有这样的<a href="https://answers.microsoft.com/en-us/windows/forum/all/false-positive-win32sabsikftaml/5aa91237-fb7f-4dff-a868-09737cc2bfca" target="_blank" rel="noopener">误报问题</a>，并且已经有人上报微软开发部门。不过时至今日似乎此问题依然存在。</p>
+<p>对于这个问题最简单的处理方法是：在 Defender 里设置允许执行该文件。但是该方法对于普通用户来讲可能并不合理（用户为什么会完全信任你的软件呢）。所以还需要一个更合理的方案。</p>
+<p>目前我所采用的解决方案是<strong>给执行文件进行数字签名</strong>，这样至少我的应用程序不会被删除。</p>
+<h2 id="给执行文件进行免费数字签名">给执行文件进行免费数字签名</h2>
+<p>签名工具需要安装 <a href="https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/" target="_blank" rel="noopener">Windows SDK</a>，当然也可以通过 <a href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">Visual Studio Installer</a> 来安装。</p>
+<blockquote>
+<p>下面<code>C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\</code>是 <a href="https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/" target="_blank" rel="noopener">Windows SDK</a> 的安装地址，需要替换成你的安装目录，这个目录里应该能够找到<code>signtool.exe</code>文件。</p>
+<p>假设执行文件叫<code>myapp.exe</code>。</p>
+</blockquote>
+<p>打开 CMD，执行如下命令：</p>
+<p>第一步，设置PATH，方便后面执行签名程序：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch"><span style="color:#66d9ef">SET</span> PATH=C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\;%PATH%
+</code></pre></div><p>第二步，制作签名文件（执行后会有弹框来设置一个签证密码，<code>-n</code>表示发布者的证书的名称，<code>-ss</code>表示将存储生成的证书的使用者证书存储的名称，更多详细的参数请参考<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/makecert" target="_blank" rel="noopener">这里</a>）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">makecert -n <span style="color:#e6db74">&#34;CN=myapp.com,E=admin@myapp.com,C=China&#34;</span> -r myapp.cer -ss myapp.com -sv myapp.pvk -$ individual
+</code></pre></div><p>第三步，接下来将签名文件<code>.cer</code>转换成<code>.spc</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">cert2spc myapp.cer myapp.spc
+</code></pre></div><p>第四步，通过<code>.spc</code>将<code>.pvk</code>转换成<code>.pfx</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">pvk2pfx -pvk myapp.pvk -spc myapp.spc -pfx myapp.pfx
+</code></pre></div><p>最后，使用<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/signtool" target="_blank" rel="noopener">SignTool</a>对执行文件<code>myapp.exe</code>进行数字签名：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">signtool sign /fd SHA256  /f myapp.pfx myapp.exe
+</code></pre></div><p>至此，您的这个执行文件就不会被误报含病毒😄。因为已经制作好<code>.pfx</code>文件，所以后续再签名仅执行最后一步即可。<strong>此方法主要是用于测试目的或开源项目，对于商业应用分发还是建议购买正版签名证书。</strong></p>
+<p>希望此方法对你也有帮助🤝。</p>
+<blockquote>
+<p>（以下介绍取自<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/cryptography-tools" target="_blank" rel="noopener">微软官方介绍</a>）</p>
+<p><strong>代码签名简介</strong></p>
+<p>软件行业必须为用户提供信任代码的方法，包括 Internet 上发布的代码。 许多网页仅包含可以下载且风险很小的静态信息。 但是，某些页面包含要下载和运行在用户计算机上的控件和应用程序。 这些可执行文件可能会有下载和运行的风险。</p>
+<p>打包的软件使用品牌和受信任的销售网点来保证用户的完整性，但在 Internet 上传输代码时，这些保证不可用。 此外，Internet 本身无法保证软件创建者的身份。 它也不能保证任何下载的软件在创建后未更改。 浏览器可以显示一条警告消息，说明下载任何类型的数据可能存在的危险，但浏览器无法验证代码是否是它声称的。 必须采取更活跃的方法，使 Internet 成为分发软件的可靠媒体。</p>
+<p>提供文件的真实性和 完整性 保证的一种方法是将 数字签名 附加到这些文件。 附加到文件的数字签名会积极标识该文件的分发服务器，并确保在创建签名后未更改文件的内容。</p>
+</blockquote>
+</div>
+
+    
+    
+<script src="https://utteranc.es/client.js"
+    repo="jixingcn/jixing.ink"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://jixing.ink/posts/tips-create-staticmesh-in-runtime/"><i class="fa fa-chevron-circle-left"></i> 运行时创建UStaticMesh要注意的两点</a>
+        </li>
+        
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>| 版权所有 2023@XingJi，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+    </footer>
+</div>
+<div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
+    <a target="_blank" style="color:#939393;" href="http://beian.miit.gov.cn/">晋ICP备2020009942号-2</a>
+    <a target="_blank" style="color:#939393;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010502050875" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img style="width: 18px; height: 18px;" src="/images/logos/gongan.png" alt="beian" />晋公网安备 14010502050875号
+    </a>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script type="application/javascript">var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; ga('create', 'UA-182236447-1', 'auto'); ga('send', 'pageview'); }</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02RP1LHEKB"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-02RP1LHEKB');</script>
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</body>
+</html>

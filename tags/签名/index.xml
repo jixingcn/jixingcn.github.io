@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>签名 on 愚头的技术分享</title>
+    <link>https://jixing.ink/tags/%E7%AD%BE%E5%90%8D/</link>
+    <description>Recent content in 签名 on 愚头的技术分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Thu, 09 Mar 2023 09:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E7%AD%BE%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml</title>
+      <link>https://jixing.ink/posts/false-positive-trojan-win32-sabsik/</link>
+      <pubDate>Thu, 09 Mar 2023 09:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/false-positive-trojan-win32-sabsik/</guid>
+      <image>https://jixing.ink//images/false-positive-trojan-win32-sabsik.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/false-positive-trojan-win32-sabsik.jpg&#34; title=&#34;/images/false-positive-trojan-win32-sabsik.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/false-positive-trojan-win32-sabsik/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>
