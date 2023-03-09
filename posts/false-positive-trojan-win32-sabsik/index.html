@@ -195,7 +195,7 @@
     
 
     <div class="article-content"><p>最近将一个 Golang 编译的执行文件放到他人机器上执行，但是 Microsoft Defender Antivirus 认为该执行文件含有木门病毒 - <a href="https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Sabsik.TE.A!ml" target="_blank" rel="noopener">Trojan:Win32/Sabsik.TE.A!ml</a>，结果不但不能运行还被自动删除😢。</p>
-<p>那么对于这样的误报该如何处理？经过一番搜索后发现也有这样的<a href="https://answers.microsoft.com/en-us/windows/forum/all/false-positive-win32sabsikftaml/5aa91237-fb7f-4dff-a868-09737cc2bfca" target="_blank" rel="noopener">误报问题</a>，并且已经有人上报微软开发部门。不过时至今日似乎此问题依然存在。</p>
+<p>那么对于这样的误报该如何处理？经过一番搜索后发现早就存在这样的<a href="https://answers.microsoft.com/en-us/windows/forum/all/false-positive-win32sabsikftaml/5aa91237-fb7f-4dff-a868-09737cc2bfca" target="_blank" rel="noopener">误报问题</a>，并且已经有人上报微软开发部门。不过时至今日似乎此问题依然存在。</p>
 <p>对于这个问题最简单的处理方法是：在 Defender 里设置允许执行该文件。但是该方法对于普通用户来讲可能并不合理（用户为什么会完全信任你的软件呢）。所以还需要一个更合理的方案。</p>
 <p>目前我所采用的解决方案是<strong>给执行文件进行数字签名</strong>，这样至少我的应用程序不会被删除。</p>
 <h2 id="给执行文件进行免费数字签名">给执行文件进行免费数字签名</h2>
