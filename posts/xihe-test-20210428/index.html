@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>羲和效果测试 - 2021.04.28 降噪与抗锯齿 | 愚头的技术分享</title>
+  <title>羲和效果测试 - 2021.04.28 降噪与抗锯齿 | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="羲和效果测试 - 2021.04.28 降噪与抗锯齿" />
 <meta property="og:description" content="很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“羲和”项目进行了重构，后续会介绍重构内容。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/xihe-test-20210428/" />
+<meta property="og:url" content="https://jixing.ink/posts/xihe-test-20210428/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-28T11:36:03+08:00" />
-<meta property="article:modified_time" content="2021-04-28T11:36:03+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2021-04-28T11:36:03+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="羲和效果测试 - 2021.04.28 降噪与抗锯齿"/>
 <meta name="twitter:description" content="很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“羲和”项目进行了重构，后续会介绍重构内容。"/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +43,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -83,15 +78,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -243,6 +235,7 @@
 不过有一个<strong>抗锯齿问题</strong>，<a href="https://developer.nvidia.com/optix/" target="_blank" rel="noopener">OptiX</a>降噪的目的是为了减少采样过程中的噪点，而锯齿并不是它所负责的。
 可以从后面的抗锯齿对比中看出，在未打开抗锯齿下百叶窗有明显的锯齿。虽然可以通过提高分辨率来降低锯齿，但是那样会带来更多的性能消耗，所以<strong>渲染器的抗锯齿最好还是不要丢掉</strong>。</p>
 </div>
+    
 
     
     

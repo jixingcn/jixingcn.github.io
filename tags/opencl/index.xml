@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenCL on 愚头的技术分享</title>
+    <title>OpenCL on 愚头的技术博客</title>
     <link>https://jixing.ink/tags/opencl/</link>
-    <description>Recent content in OpenCL on 愚头的技术分享</description>
+    <description>Recent content in OpenCL on 愚头的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
@@ -18,7 +18,7 @@
       <guid>https://jixing.ink/posts/personal-note-20201108/</guid>
       <description>&lt;p&gt;SYCL 这是一个针对高性能计算的抽象层，基于标准的C++语言，规范了并行计算的C++接口，在编译阶段针对不同设备进行并行加速。 例如，对于CPU使用OpenMP进行加速，对NVIDIA的GPU利用CUDA或OpenCL+SPIR进行加速，对AMD的GPU则利用ROCm或OpenCL+SPIR进行加速。 这样最明显的好处是同一套代码，可以充分利用不同的设备来实现高性能计算。
 对于最近几年大热的机器学习和光线追踪来讲，完全可以利用这个技术写一套代码来实现跨设备和平台😄（是真的吗？）。
-   实现 介绍     oneAPI DPC++ 由Intel实现的SYCL，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请Intel的DevCloud直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。   ComputeCPP 这是一个实现最完善的SYCL，由Codeplay Software Ltd.开发，并且已经商用。   triSYCL 开源项目，由Xilinx开发，就是最近被AMD收购的那家公司。   hipSYCL 开源项目，由德国Heidelberg大学的HPC技术专家Alpay Aksel主导开发。    相关文章和项目  SYCL官方资源 SYCL技术站（Codeplay Software Ltd.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/personal-note-20201108/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+实现 介绍 oneAPI DPC++ 由Intel实现的SYCL，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请Intel的DevCloud直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。 ComputeCPP 这是一个实现最完善的SYCL，由Codeplay Software Ltd.开发，并且已经商用。 triSYCL 开源项目，由Xilinx开发，就是最近被AMD收购的那家公司。 hipSYCL 开源项目，由德国Heidelberg大学的HPC技术专家Alpay Aksel主导开发。 相关文章和项目 SYCL官方资源 SYCL技术站（Codeplay Software Ltd.开发） SYCL &amp;amp; Eigen Starter Project Ray-tracing in a Weekend with SYCL: Basic sphere tracing A portable GPU path Tracer library running powered by SYCL.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/personal-note-20201108/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

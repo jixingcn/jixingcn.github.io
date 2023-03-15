@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>想编译UE4？请不要安装免费版IncrediBuild！ | 愚头的技术分享</title>
+  <title>想编译UE4？请不要安装免费版IncrediBuild！ | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="想编译UE4？请不要安装免费版IncrediBuild！" />
 <meta property="og:description" content="IncrediBuild是一个很棒的分布式编译工具，对于编译UE4有很好的加速作用，但是不要使用免费版去编译UE4，因为、、、" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/" />
+<meta property="og:url" content="https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-10T13:00:00+08:00" />
-<meta property="article:modified_time" content="2021-03-10T13:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2021-03-10T13:00:00+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="想编译UE4？请不要安装免费版IncrediBuild！"/>
 <meta name="twitter:description" content="IncrediBuild是一个很棒的分布式编译工具，对于编译UE4有很好的加速作用，但是不要使用免费版去编译UE4，因为、、、"/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +43,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -83,15 +78,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -187,7 +179,7 @@
 <p>目前UE4项目越来越大，完整编译一次都要很长时间（至少一小时）。对于安装了<a href="https://www.incredibuild.com/" target="_blank" rel="noopener">IncrediBuild</a>的<a href="https://visualstudio.microsoft.com/vs/" target="_blank" rel="noopener">VisualStudio</a>，<a href="https://www.incredibuild.com/" target="_blank" rel="noopener">IncrediBuild</a>会自动针对<a href="https://www.incredibuild.com/unreal-engine-acceleration" target="_blank" rel="noopener">UnrealEngine加速</a>编译。当然也会加速Shader编译，要知道重新编译UE4的Shader也是一个漫长的过程(<em>尤其对于我这台机器来讲</em>)。</p>
 <h2 id="会有什么问题">会有什么问题</h2>
 <p>前一段时间在写一些C/C++项目时，但是总觉得编译太慢（VS自己的编译速度已经很不错了），所以就在更新<a href="https://visualstudio.microsoft.com/vs/" target="_blank" rel="noopener">VisualStudio</a>时勾选了<strong>IncrediBuild - Build Acceleration</strong>。安装过后很顺利地用上了免费版的<a href="https://www.incredibuild.com/" target="_blank" rel="noopener">IncrediBuild</a>（也就是无许可证书的版本），总体感觉对于编译项目的提升还是有一定效果的。</p>
-<p>随后又打开了一个UE4的C/C++项目，编译的速度也是不错的🕶。在修改一个材质后点击保存按钮，这个时候问题来了，保存进度一直不动，整个UE4编辑器像是在等待什么。在尝试几十次后都搞不懂问题出在哪里，考虑到材质保存时会引擎会编译Shader，所以干脆按**Ctrl+Shift+.**重新编译Shader，但是编译Shader进度依然不动。更悲剧的是编辑器都无法打开了，启动编辑器后进度到45%时就停止了😱。至此整个项目都搞不下去了。</p>
+<p>随后又打开了一个UE4的C/C++项目，编译的速度也是不错的😎。在修改一个材质后点击保存按钮，这个时候问题来了，保存进度一直不动，整个UE4编辑器像是在等待什么。在尝试几十次后都搞不懂问题出在哪里，考虑到材质保存时会引擎会编译Shader，所以干脆按**Ctrl+Shift+.**重新编译Shader，但是编译Shader进度依然不动。更悲剧的是编辑器都无法打开了，启动编辑器后进度到45%时就停止了😱。至此整个项目都搞不下去了。</p>
 <p>稍等冷静下来🧠回想一下我都干了什么，“编译C/C++、修改材质、编译材质、重新编译Shader、、、”，“好吧，再来一次、、、”。</p>
 <p>接下来看日志，里面也是显示正在编译Shader中。打开任务管理器，UE4Editor进程一直在运行，似乎在耐心地等着，可我已经没有耐心了。
 突然想起重新编译Shader会启动很多<code>ShaderCompileWorker.exe</code>，但是为什么现在只剩下一个了？既然和编译有关，自然联想起前几天安装上的<a href="https://www.incredibuild.com/" target="_blank" rel="noopener">IncrediBuild</a>。卸载这个神器，项目再次恢复😂。</p>
@@ -195,6 +187,7 @@
 <h2 id="总结下来就是">总结下来就是</h2>
 <p><strong>玩UE4的穷鬼不要用免费版的<a href="https://www.incredibuild.com/" target="_blank" rel="noopener">IncrediBuild</a></strong>。</p>
 </div>
+    
 
     
     

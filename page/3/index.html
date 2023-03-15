@@ -2,21 +2,20 @@
 <html lang="zh">
 <head>
   
-  <title>愚头的技术分享</title>
+  <title>愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
-<meta name="author" content="纪星" /><link rel="alternate" type="application/rss+xml+xml" href="https://jixing.ink/index.xml" title="愚头的技术分享" /><meta property="og:title" content="愚头的技术分享" />
+<meta name="author" content="纪星" /><link rel="alternate" type="application/rss+xml+xml" href="https://jixing.ink/index.xml" title="愚头的技术博客" /><meta property="og:title" content="愚头的技术博客" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://jixing.ink/" />
-<meta property="og:updated_time" content="2023-03-09T09:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="og:url" content="https://jixing.ink/" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="愚头的技术分享"/>
+<meta name="twitter:title" content="愚头的技术博客"/>
 <meta name="twitter:description" content=""/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +42,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -90,15 +84,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -181,7 +172,10 @@
 
             <p>平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
 平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
-相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角  即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示    效果展示 颜色、强度和方向是常识，这里就不进行展示。</p><a href="/posts/xihe-development-log-2-direction-light/">阅读更多、、、</a><br><br>
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
+散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
+散射角度为0，如下图：
+散射角度为2，如下图：</p><a href="/posts/xihe-development-log-2-direction-light/">阅读更多、、、</a><br><br>
         </li>
         
         <li >
@@ -251,75 +245,42 @@
 
             <p>本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
 关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
- 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
+背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
 本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
 不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
 渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
-  OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。   Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
-Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。</p><a href="/posts/xihe-development-log-1-intro/">阅读更多、、、</a><br><br>
+OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。 Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
+Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。
+V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。</p><a href="/posts/xihe-development-log-1-intro/">阅读更多、、、</a><br><br>
         </li>
         
     </ul>
 </section>
 
 
-
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-    <a href="/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/page/2/">2</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/page/3/">3</a></li>
-    
-    
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
-
-
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
 
 
 

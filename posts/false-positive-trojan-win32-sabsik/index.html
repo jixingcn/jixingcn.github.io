@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml | 愚头的技术分享</title>
+  <title>编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml" />
 <meta property="og:description" content="最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/false-positive-trojan-win32-sabsik/" />
+<meta property="og:url" content="https://jixing.ink/posts/false-positive-trojan-win32-sabsik/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-09T09:00:00+08:00" />
-<meta property="article:modified_time" content="2023-03-09T09:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2023-03-09T09:00:00+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="编译出的执行文件在他人机器上被报木马 Trojan:Win32/Sabsik.TE.A!ml"/>
 <meta name="twitter:description" content="最近遇到 Microsoft Defender Antivirus 会将编译的应用含有木门病毒 Trojan:Win32/Sabsik.TE.A!ml，对于这样的误报该如何处理？"/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +43,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -83,15 +78,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -206,16 +198,16 @@
 </blockquote>
 <p>打开 CMD，执行如下命令：</p>
 <p>第一步，设置PATH，方便后面执行签名程序：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch"><span style="color:#66d9ef">SET</span> PATH=C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\;%PATH%
-</code></pre></div><p>第二步，制作签名文件（执行后会有弹框来设置一个签证密码，<code>-n</code>表示发布者的证书的名称，<code>-ss</code>表示将存储生成的证书的使用者证书存储的名称，更多详细的参数请参考<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/makecert" target="_blank" rel="noopener">这里</a>）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">makecert -n <span style="color:#e6db74">&#34;CN=myapp.com,E=admin@myapp.com,C=China&#34;</span> -r myapp.cer -ss myapp.com -sv myapp.pvk -$ individual
-</code></pre></div><p>第三步，接下来将签名文件<code>.cer</code>转换成<code>.spc</code>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">cert2spc myapp.cer myapp.spc
-</code></pre></div><p>第四步，通过<code>.spc</code>将<code>.pvk</code>转换成<code>.pfx</code>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">pvk2pfx -pvk myapp.pvk -spc myapp.spc -pfx myapp.pfx
-</code></pre></div><p>最后，使用<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/signtool" target="_blank" rel="noopener">SignTool</a>对执行文件<code>myapp.exe</code>进行数字签名：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">signtool sign /fd SHA256  /f myapp.pfx myapp.exe
-</code></pre></div><p>至此，您的这个执行文件就不会被误报含病毒😄。因为已经制作好<code>.pfx</code>文件，所以后续再签名仅执行最后一步即可。<strong>此方法主要是用于测试目的或开源项目，对于商业应用分发还是建议购买正版签名证书。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> PATH=C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\;%PATH%
+</span></span></code></pre></div><p>第二步，制作签名文件（执行后会有弹框来设置一个签证密码，<code>-n</code>表示发布者的证书的名称，<code>-ss</code>表示将存储生成的证书的使用者证书存储的名称，更多详细的参数请参考<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/makecert" target="_blank" rel="noopener">这里</a>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span>makecert -n <span style="color:#e6db74">&#34;CN=myapp.com,E=admin@myapp.com,C=China&#34;</span> -r myapp.cer -ss myapp.com -sv myapp.pvk -$ individual
+</span></span></code></pre></div><p>第三步，接下来将签名文件<code>.cer</code>转换成<code>.spc</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span>cert2spc myapp.cer myapp.spc
+</span></span></code></pre></div><p>第四步，通过<code>.spc</code>将<code>.pvk</code>转换成<code>.pfx</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span>pvk2pfx -pvk myapp.pvk -spc myapp.spc -pfx myapp.pfx
+</span></span></code></pre></div><p>最后，使用<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/signtool" target="_blank" rel="noopener">SignTool</a>对执行文件<code>myapp.exe</code>进行数字签名：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span>signtool sign /fd SHA256  /f myapp.pfx myapp.exe
+</span></span></code></pre></div><p>至此，您的这个执行文件就不会被误报含病毒😄。因为已经制作好<code>.pfx</code>文件，所以后续再签名仅执行最后一步即可。<strong>此方法主要是用于测试目的或开源项目，对于商业应用分发还是建议购买正版签名证书。</strong></p>
 <p>希望此方法对你也有帮助🤝。</p>
 <blockquote>
 <p>（以下介绍取自<a href="https://learn.microsoft.com/zh-cn/windows/win32/seccrypto/cryptography-tools" target="_blank" rel="noopener">微软官方介绍</a>）</p>
@@ -225,6 +217,7 @@
 <p>提供文件的真实性和 完整性 保证的一种方法是将 数字签名 附加到这些文件。 附加到文件的数字签名会积极标识该文件的分发服务器，并确保在创建签名后未更改文件的内容。</p>
 </blockquote>
 </div>
+    
 
     
     

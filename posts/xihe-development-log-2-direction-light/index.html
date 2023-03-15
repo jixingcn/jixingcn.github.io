@@ -1,26 +1,32 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>羲和开发日志（二） 平行光 | 愚头的技术分享</title>
+  <title>羲和开发日志（二） 平行光 | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="羲和开发日志（二） 平行光" />
 <meta property="og:description" content="平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
 平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
-相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角  即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示    效果展示 颜色、强度和方向是常识，这里就不进行展示。" />
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
+散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
+散射角度为0，如下图：
+散射角度为2，如下图：" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/xihe-development-log-2-direction-light/" />
+<meta property="og:url" content="https://jixing.ink/posts/xihe-development-log-2-direction-light/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-03T10:12:39+08:00" />
-<meta property="article:modified_time" content="2020-11-03T10:12:39+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2020-11-03T10:12:39+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="羲和开发日志（二） 平行光"/>
 <meta name="twitter:description" content="平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
 平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
-相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角  即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示    效果展示 颜色、强度和方向是常识，这里就不进行展示。"/>
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
+散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
+散射角度为0，如下图：
+散射角度为2，如下图："/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -33,12 +39,6 @@
   
   
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
   
 
 <script>
@@ -53,21 +53,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -93,15 +88,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -230,6 +222,7 @@
 <p><img src="/images/xihe-result-light-direction-angle57.jpg" alt="xihe-result-light-direction-angle57"></p>
 <p><em>相关场景模型取自<a href="https://blendswap.com/blend/13363" target="_blank" rel="noopener">The Breakfast Room(License: CC-BY)</a></em></p>
 </div>
+    
 
     
     

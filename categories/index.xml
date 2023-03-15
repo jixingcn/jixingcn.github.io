@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 愚头的技术分享</title>
+    <title>Categories on 愚头的技术博客</title>
     <link>https://jixing.ink/categories/</link>
-    <description>Recent content in Categories on 愚头的技术分享</description>
+    <description>Recent content in Categories on 愚头的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
@@ -17,15 +17,6 @@
       <author>jixing@jixing.ink (纪星)</author>
       <guid>https://jixing.ink/categories/%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/categories/%E9%97%AE%E9%A2%98/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
-      </description>
-    </item>
-    <item>
-      <title>页面</title>
-      <link>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</link>
-      <pubDate>Fri, 03 Feb 2023 00:00:00 +0800</pubDate>
-      <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
@@ -62,6 +53,15 @@
       <author>jixing@jixing.ink (纪星)</author>
       <guid>https://jixing.ink/categories/%E7%BE%B2%E5%92%8C/</guid>
       <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/categories/%E7%BE%B2%E5%92%8C/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>页面</title>
+      <link>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/categories/%E9%A1%B5%E9%9D%A2/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>

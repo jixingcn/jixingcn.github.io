@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>射灯 on 愚头的技术分享</title>
+    <title>射灯 on 愚头的技术博客</title>
     <link>https://jixing.ink/tags/%E5%B0%84%E7%81%AF/</link>
-    <description>Recent content in 射灯 on 愚头的技术分享</description>
+    <description>Recent content in 射灯 on 愚头的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
@@ -18,7 +18,8 @@
       <guid>https://jixing.ink/posts/xihe-development-log-4-spot-light/</guid>
       <image>https://jixing.ink//images/xihe-result-light-spot.jpg</image>
       <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-spot.jpg&#34; title=&#34;/images/xihe-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
-相关参数  颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角  对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到    效果展示 半径与内外角 半径为0cm，外角60度，内角60度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
+羲和 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

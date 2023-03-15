@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>相机 on 愚头的技术分享</title>
+    <title>相机 on 愚头的技术博客</title>
     <link>https://jixing.ink/tags/%E7%9B%B8%E6%9C%BA/</link>
-    <description>Recent content in 相机 on 愚头的技术分享</description>
+    <description>Recent content in 相机 on 愚头的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
@@ -19,12 +19,12 @@
       <image>https://jixing.ink//images/xihe-test-20201124.jpg</image>
       <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201124.jpg&#34; title=&#34;/images/xihe-test-20201124.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
 注意：左侧玻璃球是空心，而右侧玻璃球是实心。
-   Albedo Normal          通过以上三个图得到的降噪结果：
+Albedo Normal 通过以上三个图得到的降噪结果：
 另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
- 这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
+这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
 下图是一张高采样图(~10m)，未使用降噪。
- 更多：
-   采样 降噪             相关场景模型取自The Breakfast Room(License: CC-BY)     &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+更多：
+采样 降噪 相关场景模型取自The Breakfast Room(License: CC-BY) &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

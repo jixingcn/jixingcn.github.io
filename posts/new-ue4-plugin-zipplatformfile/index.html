@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>UE4新插件 - ZipPlatformFile | 愚头的技术分享</title>
+  <title>UE4新插件 - ZipPlatformFile | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="UE4新插件 - ZipPlatformFile" />
 <meta property="og:description" content="这是一个在内存中解压和加载.zip文件的插件，完全不占用磁盘，支持密码解压，支持蓝图方法，支持自定义挂载点，支持加载.uasset等资源。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/" />
+<meta property="og:url" content="https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-17T22:00:00+08:00" />
-<meta property="article:modified_time" content="2021-07-17T22:00:00+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2021-07-17T22:00:00+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="UE4新插件 - ZipPlatformFile"/>
 <meta name="twitter:description" content="这是一个在内存中解压和加载.zip文件的插件，完全不占用磁盘，支持密码解压，支持蓝图方法，支持自定义挂载点，支持加载.uasset等资源。"/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +43,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -90,15 +85,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -239,8 +231,8 @@
 <p>蓝图：</p>
 <iframe src="https://blueprintue.com/render/jb281-k2/" scrolling="no" allowfullscreen style="width: 100%;height: 240px;"></iframe>
 <p>代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>Mount(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip&#34;</span>), TEXT(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">test.zip&#34;</span>), TEXT(<span style="color:#e6db74">&#34;password&#34;</span>));
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>Mount(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip&#34;</span>), TEXT(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">test.zip&#34;</span>), TEXT(<span style="color:#e6db74">&#34;password&#34;</span>));
+</span></span></code></pre></div><blockquote>
 <p>这个挂载点可以由你自己来决定，不过根目录需要按照<code>UE4</code>官方的目录映射关系来。如：</p>
 <ul>
 <li><code>/Engine</code>：对应项目的引擎的<code>Content</code>目录</li>
@@ -254,45 +246,46 @@
 <p>蓝图：</p>
 <iframe src="https://blueprintue.com/render/mgjjuouq/" scrolling="no" allowfullscreen style="width: 100%;height: 200px;"></iframe>
 <p>代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FString LilyJsonContext;
-FFileHelp<span style="color:#f92672">::</span>LoadToString(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyJsonContext);
-<span style="color:#75715e">/// 或者
-</span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>LoadFileToString(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyJsonContext);
-</code></pre></div><p>加载该文件<code>companies/companyB/users/lily.xlsx</code>的内容：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">TArray<span style="color:#f92672">&lt;</span>uint8<span style="color:#f92672">&gt;</span> LilyXlsxContext;
-FFileHelp<span style="color:#f92672">::</span>LoadFileToArray(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.xlsx&#34;</span>), LilyXlsxContext);
-<span style="color:#75715e">/// 或者
-</span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>LoadFileToArray(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyXlsxContext);
-</code></pre></div><p><strong>判断是否存在文件或目录</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>FString LilyJsonContext;
+</span></span><span style="display:flex;"><span>FFileHelp<span style="color:#f92672">::</span>LoadToString(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyJsonContext);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 或者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>LoadFileToString(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyJsonContext);
+</span></span></code></pre></div><p>加载该文件<code>companies/companyB/users/lily.xlsx</code>的内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>TArray<span style="color:#f92672">&lt;</span>uint8<span style="color:#f92672">&gt;</span> LilyXlsxContext;
+</span></span><span style="display:flex;"><span>FFileHelp<span style="color:#f92672">::</span>LoadFileToArray(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.xlsx&#34;</span>), LilyXlsxContext);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 或者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>LoadFileToArray(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyB/users/lily.json&#34;</span>), LilyXlsxContext);
+</span></span></code></pre></div><p><strong>判断是否存在文件或目录</strong></p>
 <p>蓝图：</p>
 <iframe src="https://blueprintue.com/render/gpd73pdh/" scrolling="no" allowfullscreen style="width: 100%;height: 300px;"></iframe>
 <p>代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FPaths<span style="color:#f92672">::</span>FileExists(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>));
-<span style="color:#75715e">/// 或者
-</span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>FileExists(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>));
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FPaths<span style="color:#f92672">::</span>DirectoryExists(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA&#34;</span>));
-<span style="color:#75715e">/// 或者
-</span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>DirectoryExists(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA&#34;</span>));
-</code></pre></div><p><strong>获取文件或目录的创建时间和访问时间</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>FPaths<span style="color:#f92672">::</span>FileExists(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 或者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>FileExists(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>));
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>FPaths<span style="color:#f92672">::</span>DirectoryExists(TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 或者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>DirectoryExists(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA&#34;</span>));
+</span></span></code></pre></div><p><strong>获取文件或目录的创建时间和访问时间</strong></p>
 <p>蓝图：</p>
 <iframe src="https://blueprintue.com/render/_fhd9mux/" scrolling="no" allowfullscreen style="width: 100%;height: 200px;"></iframe>
 <p>代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FDateTime CreationTime, AccessTimeStamp;
-UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>GetTimeStamp(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA/users/john.xlsx&#34;</span>), CreationTime, AccessTimeStamp);
-</code></pre></div><p><strong>获取文件或目录的状态</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FFileStatData FileStatData;
-UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>GetFileStatData(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>), FileStatData);
-</code></pre></div><p><strong>卸载<code>.zip</code>文件</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>FDateTime CreationTime, AccessTimeStamp;
+</span></span><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>GetTimeStamp(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/companies/companyA/users/john.xlsx&#34;</span>), CreationTime, AccessTimeStamp);
+</span></span></code></pre></div><p><strong>获取文件或目录的状态</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>FFileStatData FileStatData;
+</span></span><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>GetFileStatData(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip/scheme.json&#34;</span>), FileStatData);
+</span></span></code></pre></div><p><strong>卸载<code>.zip</code>文件</strong></p>
 <p>蓝图：</p>
 <iframe src="https://blueprintue.com/render/kk3k716s/" scrolling="no" allowfullscreen style="width: 100%;height: 200px;"></iframe>
 <p>代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>Unmount(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">test.zip&#34;</span>));
-</code></pre></div><h2 id="注意">注意</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>Unmount(<span style="color:#66d9ef">this</span>, TEXT(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">test.zip&#34;</span>));
+</span></span></code></pre></div><h2 id="注意">注意</h2>
 <p>此插件是对<code>IPlatformFile</code>模块的扩展，所以在读取文件时要通过<code>IPlatformFile</code>或<code>FFileHelper</code>或<code>FPaths</code>或<code>UZipPlatformFileBlueprintFunctionLibrary</code>的接口来加载。</p>
 <p>如果你要使用<code>.zip</code>来打包和加载<code>UE4</code>资源，和<code>pak</code>一样要注意挂载点的路径。</p>
 <p><strong>感谢</strong></p>
 <p><a href="https://blueprintue.com/" target="_blank" rel="noopener">https://blueprintue.com/</a> 是一个非常棒👍的网站，它能够很容易地在网页上展示蓝图。</p>
 </div>
+    
 
     
     

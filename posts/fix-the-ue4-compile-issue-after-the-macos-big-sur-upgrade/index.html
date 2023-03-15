@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  <title>修复UE4在macOS Big Sur上的编译问题 | 愚头的技术分享</title>
+  <title>修复UE4在macOS Big Sur上的编译问题 | 愚头的技术博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
 <meta name="author" content="纪星" /><meta property="og:title" content="修复UE4在macOS Big Sur上的编译问题" />
 <meta property="og:description" content="如何处理除了UE4.26（最新版），其它老版本的引擎在macOS Big Sur上都会出现的编译问题？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/" />
+<meta property="og:url" content="https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-12-19T22:15:55+08:00" />
-<meta property="article:modified_time" content="2020-12-19T22:15:55+08:00" /><meta property="og:site_name" content="愚头的技术分享" />
+<meta property="article:modified_time" content="2020-12-19T22:15:55+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="修复UE4在macOS Big Sur上的编译问题"/>
 <meta name="twitter:description" content="如何处理除了UE4.26（最新版），其它老版本的引擎在macOS Big Sur上都会出现的编译问题？"/>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.111.3">
     
   <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
@@ -43,21 +43,16 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术分享</a>
+        <a href="/">愚头的技术博客</a>
       </h1>
       <ul id="social-media">
         
         
         
-        <li><a href="/pages/about-me"><i class="fas fa-user" aria-hidden="true"></i></a></li>
-        
         
         <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
               aria-hidden="true"></i></a></li>
         
-        
-        <li><a target="_blank" href="https://gitlab.com/jixingcn"><i class="fab fa-gitlab fa-lg"
-              aria-hidden="true"></i></a></li>
         
         
         
@@ -83,15 +78,12 @@
 <nav id="TableOfMain">
     <ul>
         
-        <li>
-            <a class="" href="/pages/xihe/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和</span>
-            </a>
-        </li>
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
         
         <li>
-            <a class="" href="/pages/xihe-renderer/">
-                <i class="fa-li fa  fa-lg"></i><span>羲和渲染器</span>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
             </a>
         </li>
         
@@ -189,15 +181,16 @@
 <h2 id="解决方法">解决方法</h2>
 <p>根据<a href="https://github.com/EpicGames/UnrealEngine/commit/1d252ee345cdf6c232b20c3b4bf14f13bb569c9d" target="_blank" rel="noopener">UE官方提交的代码</a>对4.24和4.25进行修改：</p>
 <p>将引擎目录下<code>Engine/Source/Runtime/ApplicationCore/ApplicationCore.Build.cs</code>和<code>Engine/Source/Runtime/Core/Core.Build.cs</code>两个文件中：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">PublicAdditionalLibraries.Add(<span style="color:#e6db74">&#34;/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport&#34;</span>);
-</code></pre></div><p>替换成</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">string SDKROOT <span style="color:#f92672">=</span> Utils.RunLocalProcessAndReturnStdOut(<span style="color:#e6db74">&#34;/usr/bin/xcrun&#34;</span>, <span style="color:#e6db74">&#34;--sdk macosx --show-sdk-path&#34;</span>);
-PublicAdditionalLibraries.Add(SDKROOT <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport.tbd&#34;</span>);
-</code></pre></div><p>即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>PublicAdditionalLibraries.Add(<span style="color:#e6db74">&#34;/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport&#34;</span>);
+</span></span></code></pre></div><p>替换成</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>string SDKROOT <span style="color:#f92672">=</span> Utils.RunLocalProcessAndReturnStdOut(<span style="color:#e6db74">&#34;/usr/bin/xcrun&#34;</span>, <span style="color:#e6db74">&#34;--sdk macosx --show-sdk-path&#34;</span>);
+</span></span><span style="display:flex;"><span>PublicAdditionalLibraries.Add(SDKROOT <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/Current/MultitouchSupport.tbd&#34;</span>);
+</span></span></code></pre></div><p>即可。</p>
 <h2 id="总结">总结</h2>
 <p>这下终于明白了为什么4.26正常但4.24和4.25出错，因为Big Sur对一些开发库的目录进行了变更，而只有最新的4.26对此变更进行了修复。其实UE4除了4.25和4.24存在该错误，其它版本肯定也存在相同的问题，因为之前的引擎版本在调用<code>MultitouchSupport</code>库时都使用了固定的目录😕，这样才导致系统更新后打包失败。我想UE官方也不会就此更新老版引擎了，所以写此篇文章提供解决方案。</p>
 <p>另外，推荐大家使用<a href="https://github.com/code4game/glTFForUE4" target="_blank" rel="noopener">glTF for UE4</a>来导入<a href="https://khronos.org/gltf" target="_blank" rel="noopener">glTF</a>文件，因为它与官方那个<a href="https://khronos.org/gltf" target="_blank" rel="noopener">glTF</a>导入插件比起来要更好用更稳定👍。同时也欢迎大家提意见，交流一下使用感受和想法。</p>
 </div>
+    
 
     
     
