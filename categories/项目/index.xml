@@ -9,7 +9,19 @@
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
     <webMaster>jixing@jixing.ink (纪星)</webMaster>
     <copyright>版权所有，转发请附原始链接</copyright>
-    <lastBuildDate>Sat, 17 Jul 2021 22:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/categories/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2023 08:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/categories/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发布羲和项目新网站</title>
+      <link>https://jixing.ink/posts/launched-a-new-website-for-xihe/</link>
+      <pubDate>Thu, 16 Mar 2023 08:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/launched-a-new-website-for-xihe/</guid>
+      <image>https://jixing.ink//images/launched-a-new-website-for-xihe.png</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/launched-a-new-website-for-xihe.png&#34; title=&#34;/images/launched-a-new-website-for-xihe.png&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;专门为羲和项目制作了一个网站，上面详细介绍了该项目，并提供安装使用说明以便您进一步了解。
+新的页面在这里：https://xihe.jixing.ink/zh/。
+欢迎访问和提出意见。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/launched-a-new-website-for-xihe/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
     <item>
       <title>UE4新插件 - ZipPlatformFile</title>
       <link>https://jixing.ink/posts/new-ue4-plugin-zipplatformfile/</link>
@@ -21,64 +33,64 @@
       </description>
     </item>
     <item>
-      <title>羲和开发日志（四） 射灯</title>
-      <link>https://jixing.ink/posts/xihe-development-log-4-spot-light/</link>
+      <title>渲染器开发日志（四） 射灯</title>
+      <link>https://jixing.ink/posts/renderer-development-log-4-spot-light/</link>
       <pubDate>Sat, 07 Nov 2020 12:19:41 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-4-spot-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-spot.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-spot.jpg&#34; title=&#34;/images/xihe-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
+      <guid>https://jixing.ink/posts/renderer-development-log-4-spot-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-spot.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-spot.jpg&#34; title=&#34;/images/renderer-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
-羲和 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+渲染器 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和开发日志（三） 点光</title>
-      <link>https://jixing.ink/posts/xihe-development-log-3-point-light/</link>
+      <title>渲染器开发日志（三） 点光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-3-point-light/</link>
       <pubDate>Fri, 06 Nov 2020 21:02:36 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-3-point-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-point.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-point.jpg&#34; title=&#34;/images/xihe-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+      <guid>https://jixing.ink/posts/renderer-development-log-3-point-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-point.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-point.jpg&#34; title=&#34;/images/renderer-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图 效果展示 颜色、强度和位置是常识，这里就不进行展示。
 半径 通过影子柔和程度可以看出点光半径的大小
 半径为0cm，如下图：
 半径为5cm，如下图：
 半径为20cm，如下图：
-相关场景模型取自The Breakfast Room(License: CC-BY)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+相关场景模型取自The Breakfast Room(License: CC-BY)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和开发日志（二） 平行光</title>
-      <link>https://jixing.ink/posts/xihe-development-log-2-direction-light/</link>
+      <title>渲染器开发日志（二） 平行光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-2-direction-light/</link>
       <pubDate>Tue, 03 Nov 2020 10:12:39 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-2-direction-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-direction.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-direction.jpg&#34; title=&#34;/images/xihe-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
+      <guid>https://jixing.ink/posts/renderer-development-log-2-direction-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-direction.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-direction.jpg&#34; title=&#34;/images/renderer-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
 平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
 散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
 散射角度为0，如下图：
-散射角度为2，如下图：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+散射角度为2，如下图：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和开发日志（一） 介绍</title>
-      <link>https://jixing.ink/posts/xihe-development-log-1-intro/</link>
+      <title>渲染器开发日志（一） 介绍</title>
+      <link>https://jixing.ink/posts/renderer-development-log-1-intro/</link>
       <pubDate>Wed, 28 Oct 2020 22:24:05 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-1-intro/</guid>
-      <image>https://jixing.ink//images/xihe-intro.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-intro.jpg&#34; title=&#34;/images/xihe-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
-关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+      <guid>https://jixing.ink/posts/renderer-development-log-1-intro/</guid>
+      <image>https://jixing.ink//images/renderer-intro.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-intro.jpg&#34; title=&#34;/images/renderer-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍渲染器项目的背景、目标和技术，当前项目状态请点这里。
 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
 本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
 不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
 渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
 OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。 Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
 Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。
-V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。
+Iray NVIDIA开发的渲染库，需要购买商业授权。 从介绍来看既可以实时渲染也可以进行影视渲染，功能十分强大，像知名的KeyShot就是基于此库开发的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

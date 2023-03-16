@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <title>渲染器效果测试 - 2020.11.11 | 愚头的技术博客</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="纪星" /><meta property="og:title" content="渲染器效果测试 - 2020.11.11" />
+<meta property="og:description" content="场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
+墙面和球体：使用漫反射材质 大方块：金属度为0，而光滑度为1，类似于一款瓷砖 小方块：金属度为1，而光滑度为1，即是一块纯金属 比对 此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。
+渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 32 总结 个人认为已经接近Blender的Cycles渲染效果😃。
+效果方面，漫反射和镜面反射所体现的效果差异不大。 性能方面，因为在两个关键因素渲染时长和反弹次数相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/posts/renderer-test-20201111/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-11T22:59:31+08:00" />
+<meta property="article:modified_time" content="2020-11-11T22:59:31+08:00" /><meta property="og:site_name" content="愚头的技术博客" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="渲染器效果测试 - 2020.11.11"/>
+<meta name="twitter:description" content="场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
+墙面和球体：使用漫反射材质 大方块：金属度为0，而光滑度为1，类似于一款瓷砖 小方块：金属度为1，而光滑度为1，即是一块纯金属 比对 此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。
+渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 32 总结 个人认为已经接近Blender的Cycles渲染效果😃。
+效果方面，漫反射和镜面反射所体现的效果差异不大。 性能方面，因为在两个关键因素渲染时长和反弹次数相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。"/>
+
+<meta name="generator" content="Hugo 0.111.3">
+    
+  <link rel="stylesheet" type="text/css" href="/fonts/roboto-mono_noto_sans_open-sans.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css" />
+  
+  
+  <link rel="icon" type="image/png" href="https://s.gravatar.com/avatar/5e13a51a9c71fb03f12b67a2852027a2?s=80">
+  
+  
+  
+  
+
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "4m90jvz7md");
+</script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <a href="/">愚头的技术博客</a>
+      </h1>
+      <ul id="social-media">
+        
+        
+        
+        
+        <li><a target="_blank" href="https://github.com/jixingcn"><i class="fab fa-github fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        
+        <li><a target="_blank" href="https://mp.weixin.qq.com/s/5fJIaoTSIhIMxhczQyo_oA"><i class="fab fa-weixin fa-lg"
+              aria-hidden="true"></i></a></li>
+        
+        
+        
+        <li><a target="_blank" href="/index.xml"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+        
+        
+        <li><a target="_blank" href="mailto:jixing@jixing.ink"><i class="fas fa-envelope"
+              aria-hidden="true"></i></a></li>
+        
+        
+      </ul>
+      
+      <p><em>一位图形学爱好者的唠叨</em></p>
+      
+    </header>
+
+    
+<nav id="TableOfMain">
+    <ul>
+        
+        <li><a href="https://xihe.jixing.ink/zh/" target="_blank"><i class="fa-li fa  fa-lg"></i><span>羲和</span></a></li>
+        
+        
+        <li>
+            <a class="" href="/pages/renderer/">
+                <i class="fa-li fa  fa-lg"></i><span>渲染器</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/about-me/">
+                <i class="fa-li fa  fa-lg"></i><span>关于我</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+<article>
+
+    
+    
+    <image src="https://jixing.ink/images/renderer-test-20201111.jpg"></image>
+    
+    
+
+    <h1>渲染器效果测试 - 2020.11.11</h1>
+
+    
+        <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2020-11-11T22:59:31&#43;08:00">2020-11-11</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E6%B8%B2%E6%9F%93%E5%99%A8">@渲染器</a>
+                
+                    , 
+                    <a href="/categories/%E6%B5%8B%E8%AF%95">@测试</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/%E5%9C%BA%E6%99%AF">#场景</a>
+                
+                    , 
+                    <a href="/tags/%E6%9D%90%E8%B4%A8">#材质</a>
+                
+                    , 
+                    <a href="/tags/%E8%87%AA%E5%8F%91%E5%85%89">#自发光</a>
+                
+                    , 
+                    <a href="/tags/%E6%BC%AB%E5%8F%8D%E5%B0%84">#漫反射</a>
+                
+                    , 
+                    <a href="/tags/%E9%95%9C%E9%9D%A2%E5%8F%8D%E5%B0%84">#镜面反射</a>
+                
+                    , 
+                    <a href="/tags/%E6%95%88%E6%9E%9C">#效果</a>
+                
+                    , 
+                    <a href="/tags/%E6%80%A7%E8%83%BD">#性能</a>
+                
+                    , 
+                    <a href="/tags/blender">#Blender</a>
+                
+                    , 
+                    <a href="/tags/cycles">#Cycles</a>
+                
+                    , 
+                    <a href="/tags/srgb">#sRGB</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
+    </ul>
+</aside>
+
+    
+
+    
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#场景">场景</a></li>
+        <li><a href="#比对">比对</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+
+    <div class="article-content"><h2 id="场景">场景</h2>
+<p>使用Blender 2.90构建出一个类似于CornellBox的测试场景。
+场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：</p>
+<ul>
+<li>墙面和球体：使用漫反射材质</li>
+<li>大方块：金属度为0，而光滑度为1，类似于一款瓷砖</li>
+<li>小方块：金属度为1，而光滑度为1，即是一块纯金属</li>
+</ul>
+<h2 id="比对">比对</h2>
+<p><strong>此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。</strong></p>
+<h3 id="渲染器效果">渲染器效果</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">是否降噪</th>
+<th style="text-align:center">渲染时长</th>
+<th style="text-align:center">反弹次数</th>
+<th style="text-align:center">采样次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">否</td>
+<td style="text-align:center">87s</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">520</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/renderer-result-cornell01.jpg" alt="renderer-result-cornell01"></p>
+<h3 id="blender的cycles效果">Blender的Cycles效果</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">是否降噪</th>
+<th style="text-align:center">渲染时长</th>
+<th style="text-align:center">反弹次数</th>
+<th style="text-align:center">采样次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">否</td>
+<td style="text-align:center">87s</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">32</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/blender-result-cornell01.jpg" alt="blender-result-cornell01"></p>
+<h2 id="总结">总结</h2>
+<p>个人认为已经接近Blender的Cycles渲染效果😃。</p>
+<p>效果方面，漫反射和镜面反射所体现的效果差异不大。
+性能方面，因为在两个关键因素<strong>渲染时长</strong>和<strong>反弹次数</strong>相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。</p>
+<p>目前主要问题有：</p>
+<ul>
+<li>整体颜色的饱和度上有较大差异
+<ul>
+<li>应该是渲染器还没有完全使用sRGB所致</li>
+<li>另外环境色不一致也是一个原因</li>
+</ul>
+</li>
+<li>自发光亮度不一致
+<ul>
+<li>应该是两者由于亮度上的单位不一致引起的</li>
+</ul>
+</li>
+</ul>
+<p>既然问题已找到，而且解决起来并不难，那么就不多说了，继续搞起来。💪</p>
+</div>
+    
+
+    
+    
+<script src="https://utteranc.es/client.js"
+    repo="jixingcn/jixing.ink"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://jixing.ink/posts/personal-note-20201108/"><i class="fa fa-chevron-circle-left"></i> 个人笔记 - 2020.11.08</a>
+        </li>
+        
+        
+        <li>
+            <a href="https://jixing.ink/posts/renderer-test-20201119/">渲染器效果测试 - 2020.11.11 (后续) <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>| 版权所有 2023@XingJi，转发请附原始链接 | 渲染器：<a target="_blank" href="https://gohugo.io" title="Hugo">Hugo</a> |</h6>
+    </footer>
+</div>
+<div style="color:darkgray; font-size: small; text-align: center; line-height: height;">
+    <a target="_blank" style="color:#939393;" href="http://beian.miit.gov.cn/">晋ICP备2020009942号-2</a>
+    <a target="_blank" style="color:#939393;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010502050875" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img style="width: 18px; height: 18px;" src="/images/logos/gongan.png" alt="beian" />晋公网安备 14010502050875号
+    </a>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/zoom.js/0.0.1/zoom.min.js"></script>
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script type="application/javascript">var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; ga('create', 'UA-182236447-1', 'auto'); ga('send', 'pageview'); }</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02RP1LHEKB"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-02RP1LHEKB');</script>
+
+<script data-ad-client="ca-pub-7476229156776785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</body>
+</html>

@@ -11,21 +11,21 @@
     <copyright>版权所有，转发请附原始链接</copyright>
     <lastBuildDate>Wed, 28 Oct 2020 22:24:05 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/mdl/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>羲和开发日志（一） 介绍</title>
-      <link>https://jixing.ink/posts/xihe-development-log-1-intro/</link>
+      <title>渲染器开发日志（一） 介绍</title>
+      <link>https://jixing.ink/posts/renderer-development-log-1-intro/</link>
       <pubDate>Wed, 28 Oct 2020 22:24:05 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-1-intro/</guid>
-      <image>https://jixing.ink//images/xihe-intro.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-intro.jpg&#34; title=&#34;/images/xihe-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
-关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+      <guid>https://jixing.ink/posts/renderer-development-log-1-intro/</guid>
+      <image>https://jixing.ink//images/renderer-intro.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-intro.jpg&#34; title=&#34;/images/renderer-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍渲染器项目的背景、目标和技术，当前项目状态请点这里。
 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
 本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
 不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
 渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
 OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。 Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
 Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。
-V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。
+Iray NVIDIA开发的渲染库，需要购买商业授权。 从介绍来看既可以实时渲染也可以进行影视渲染，功能十分强大，像知名的KeyShot就是基于此库开发的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

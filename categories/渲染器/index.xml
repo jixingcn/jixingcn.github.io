@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>渲染器 on 愚头的技术博客</title>
+    <link>https://jixing.ink/categories/%E6%B8%B2%E6%9F%93%E5%99%A8/</link>
+    <description>Recent content in 渲染器 on 愚头的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
+    <webMaster>jixing@jixing.ink (纪星)</webMaster>
+    <copyright>版权所有，转发请附原始链接</copyright>
+    <lastBuildDate>Wed, 28 Apr 2021 11:36:03 +0800</lastBuildDate><atom:link href="https://jixing.ink/categories/%E6%B8%B2%E6%9F%93%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渲染器效果测试 - 2021.04.28 降噪与抗锯齿</title>
+      <link>https://jixing.ink/posts/renderer-test-20210428/</link>
+      <pubDate>Wed, 28 Apr 2021 11:36:03 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-test-20210428/</guid>
+      <image>https://jixing.ink//images/renderer-test-20210428.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20210428.jpg&#34; title=&#34;/images/renderer-test-20210428.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“渲染器”项目进行了重构，后续会介绍重构内容。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20210428/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</title>
+      <link>https://jixing.ink/posts/renderer-test-20201124/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-test-20201124/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201124.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201124.jpg&#34; title=&#34;/images/renderer-test-20201124.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
+注意：左侧玻璃球是空心，而右侧玻璃球是实心。
+Albedo Normal 通过以上三个图得到的降噪结果：
+另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
+这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
+下图是一张高采样图(~10m)，未使用降噪。
+更多：
+采样 降噪 相关场景模型取自The Breakfast Room(License: CC-BY) &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器效果测试 - 2020.11.20</title>
+      <link>https://jixing.ink/posts/renderer-test-20201120/</link>
+      <pubDate>Fri, 20 Nov 2020 12:26:57 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-test-20201120/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201120.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201120.jpg&#34; title=&#34;/images/renderer-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
+结果 加入天光的效果：
+接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器效果测试 - 2020.11.11 (后续)</title>
+      <link>https://jixing.ink/posts/renderer-test-20201119/</link>
+      <pubDate>Thu, 19 Nov 2020 23:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-test-20201119/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201119.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201119.jpg&#34; title=&#34;/images/renderer-test-20201119.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 在上次测试比对后又改动了一些关键点，下面是重新渲染后的结果。
+比对 渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 56s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 62s 8 32 总结 可以看到与上次相比两者更加接近，主要的修改是：
+支持sRGB 调整自发光颜色单位 优化光线反弹计算 &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201119/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器效果测试 - 2020.11.11</title>
+      <link>https://jixing.ink/posts/renderer-test-20201111/</link>
+      <pubDate>Wed, 11 Nov 2020 22:59:31 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-test-20201111/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201111.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201111.jpg&#34; title=&#34;/images/renderer-test-20201111.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
+墙面和球体：使用漫反射材质 大方块：金属度为0，而光滑度为1，类似于一款瓷砖 小方块：金属度为1，而光滑度为1，即是一块纯金属 比对 此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。
+渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 32 总结 个人认为已经接近Blender的Cycles渲染效果😃。
+效果方面，漫反射和镜面反射所体现的效果差异不大。 性能方面，因为在两个关键因素渲染时长和反弹次数相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201111/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器开发日志（四） 射灯</title>
+      <link>https://jixing.ink/posts/renderer-development-log-4-spot-light/</link>
+      <pubDate>Sat, 07 Nov 2020 12:19:41 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-development-log-4-spot-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-spot.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-spot.jpg&#34; title=&#34;/images/renderer-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
+渲染器 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器开发日志（三） 点光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-3-point-light/</link>
+      <pubDate>Fri, 06 Nov 2020 21:02:36 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-development-log-3-point-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-point.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-point.jpg&#34; title=&#34;/images/renderer-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图 效果展示 颜色、强度和位置是常识，这里就不进行展示。
+半径 通过影子柔和程度可以看出点光半径的大小
+半径为0cm，如下图：
+半径为5cm，如下图：
+半径为20cm，如下图：
+相关场景模型取自The Breakfast Room(License: CC-BY)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器开发日志（二） 平行光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-2-direction-light/</link>
+      <pubDate>Tue, 03 Nov 2020 10:12:39 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-development-log-2-direction-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-direction.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-direction.jpg&#34; title=&#34;/images/renderer-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
+平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
+散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
+散射角度为0，如下图：
+散射角度为2，如下图：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染器开发日志（一） 介绍</title>
+      <link>https://jixing.ink/posts/renderer-development-log-1-intro/</link>
+      <pubDate>Wed, 28 Oct 2020 22:24:05 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/renderer-development-log-1-intro/</guid>
+      <image>https://jixing.ink//images/renderer-intro.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-intro.jpg&#34; title=&#34;/images/renderer-intro.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;本文介绍渲染器项目的背景、目标和技术，当前项目状态请点这里。
+背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
+本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
+不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
+渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
+OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。 Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
+Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。
+V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。
+Iray NVIDIA开发的渲染库，需要购买商业授权。 从介绍来看既可以实时渲染也可以进行影视渲染，功能十分强大，像知名的KeyShot就是基于此库开发的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-1-intro/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+  </channel>
+</rss>

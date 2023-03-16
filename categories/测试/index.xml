@@ -11,67 +11,67 @@
     <copyright>版权所有，转发请附原始链接</copyright>
     <lastBuildDate>Wed, 28 Apr 2021 11:36:03 +0800</lastBuildDate><atom:link href="https://jixing.ink/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>羲和效果测试 - 2021.04.28 降噪与抗锯齿</title>
-      <link>https://jixing.ink/posts/xihe-test-20210428/</link>
+      <title>渲染器效果测试 - 2021.04.28 降噪与抗锯齿</title>
+      <link>https://jixing.ink/posts/renderer-test-20210428/</link>
       <pubDate>Wed, 28 Apr 2021 11:36:03 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20210428/</guid>
-      <image>https://jixing.ink//images/xihe-test-20210428.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20210428.jpg&#34; title=&#34;/images/xihe-test-20210428.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“羲和”项目进行了重构，后续会介绍重构内容。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20210428/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      <guid>https://jixing.ink/posts/renderer-test-20210428/</guid>
+      <image>https://jixing.ink//images/renderer-test-20210428.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20210428.jpg&#34; title=&#34;/images/renderer-test-20210428.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;很久没有更新了，一方面因为有些事情要开发所以搁置了一段时间；另外考虑到项目的稳定性，所以对“渲染器”项目进行了重构，后续会介绍重构内容。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20210428/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</title>
-      <link>https://jixing.ink/posts/xihe-test-20201124/</link>
+      <title>渲染器效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</title>
+      <link>https://jixing.ink/posts/renderer-test-20201124/</link>
       <pubDate>Tue, 24 Nov 2020 00:00:00 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20201124/</guid>
-      <image>https://jixing.ink//images/xihe-test-20201124.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201124.jpg&#34; title=&#34;/images/xihe-test-20201124.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
+      <guid>https://jixing.ink/posts/renderer-test-20201124/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201124.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201124.jpg&#34; title=&#34;/images/renderer-test-20201124.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;最近加入半透明材质、相机景深和降噪功能。 得到如下渲染采样图：
 注意：左侧玻璃球是空心，而右侧玻璃球是实心。
 Albedo Normal 通过以上三个图得到的降噪结果：
 另外还细化了反弹次数的控制，可以根据材质（漫反射、镜面反射和透明）的不同进行精细控制，以便优化渲染速度。
 这些渲染图在您眼里可能画面质量不高，因为渲染时间非常短(~10s)（还是一台960M显卡的笔记本上进行的）。 而且个人觉得时间越短，越容易找到问题和检验效果。
 下图是一张高采样图(~10m)，未使用降噪。
 更多：
-采样 降噪 相关场景模型取自The Breakfast Room(License: CC-BY) &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+采样 降噪 相关场景模型取自The Breakfast Room(License: CC-BY) &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201124/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和效果测试 - 2020.11.20</title>
-      <link>https://jixing.ink/posts/xihe-test-20201120/</link>
+      <title>渲染器效果测试 - 2020.11.20</title>
+      <link>https://jixing.ink/posts/renderer-test-20201120/</link>
       <pubDate>Fri, 20 Nov 2020 12:26:57 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20201120/</guid>
-      <image>https://jixing.ink//images/xihe-test-20201120.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201120.jpg&#34; title=&#34;/images/xihe-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
+      <guid>https://jixing.ink/posts/renderer-test-20201120/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201120.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201120.jpg&#34; title=&#34;/images/renderer-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
 结果 加入天光的效果：
-接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和效果测试 - 2020.11.11 (后续)</title>
-      <link>https://jixing.ink/posts/xihe-test-20201119/</link>
+      <title>渲染器效果测试 - 2020.11.11 (后续)</title>
+      <link>https://jixing.ink/posts/renderer-test-20201119/</link>
       <pubDate>Thu, 19 Nov 2020 23:00:00 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20201119/</guid>
-      <image>https://jixing.ink//images/xihe-test-20201119.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201119.jpg&#34; title=&#34;/images/xihe-test-20201119.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 在上次测试比对后又改动了一些关键点，下面是重新渲染后的结果。
-比对 羲和效果 是否降噪 渲染时长 反弹次数 采样次数 否 56s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 62s 8 32 总结 可以看到与上次相比两者更加接近，主要的修改是：
-支持sRGB 调整自发光颜色单位 优化光线反弹计算 &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201119/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      <guid>https://jixing.ink/posts/renderer-test-20201119/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201119.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201119.jpg&#34; title=&#34;/images/renderer-test-20201119.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 在上次测试比对后又改动了一些关键点，下面是重新渲染后的结果。
+比对 渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 56s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 62s 8 32 总结 可以看到与上次相比两者更加接近，主要的修改是：
+支持sRGB 调整自发光颜色单位 优化光线反弹计算 &lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201119/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和效果测试 - 2020.11.11</title>
-      <link>https://jixing.ink/posts/xihe-test-20201111/</link>
+      <title>渲染器效果测试 - 2020.11.11</title>
+      <link>https://jixing.ink/posts/renderer-test-20201111/</link>
       <pubDate>Wed, 11 Nov 2020 22:59:31 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20201111/</guid>
-      <image>https://jixing.ink//images/xihe-test-20201111.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201111.jpg&#34; title=&#34;/images/xihe-test-20201111.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
+      <guid>https://jixing.ink/posts/renderer-test-20201111/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201111.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201111.jpg&#34; title=&#34;/images/renderer-test-20201111.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;场景 使用Blender 2.90构建出一个类似于CornellBox的测试场景。 场景内部顶部有一块模型使用自发光材质，另外还有大小两个方块和一个球体。材质使用情况如下：
 墙面和球体：使用漫反射材质 大方块：金属度为0，而光滑度为1，类似于一款瓷砖 小方块：金属度为1，而光滑度为1，即是一块纯金属 比对 此场景主要测试自发光、漫反射和镜面反射的效果。注意：没有任何灯，仅仅通过自发光照亮场景。
-羲和效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 32 总结 个人认为已经接近Blender的Cycles渲染效果😃。
-效果方面，漫反射和镜面反射所体现的效果差异不大。 性能方面，因为在两个关键因素渲染时长和反弹次数相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201111/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+渲染器效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 520 Blender的Cycles效果 是否降噪 渲染时长 反弹次数 采样次数 否 87s 8 32 总结 个人认为已经接近Blender的Cycles渲染效果😃。
+效果方面，漫反射和镜面反射所体现的效果差异不大。 性能方面，因为在两个关键因素渲染时长和反弹次数相同的条件下效果相近，所以性能差异也不大。只是采样次数差异很大，可能是采样次数的计数方式不一样导致的。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201111/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

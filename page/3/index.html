@@ -112,13 +112,81 @@
         
         
         <li class="first" >
-            <a href="https://jixing.ink/posts/xihe-development-log-2-direction-light/" title="羲和开发日志（二） 平行光">
+            <a href="https://jixing.ink/posts/renderer-development-log-3-point-light/" title="渲染器开发日志（三） 点光">
                 
                 
-                <image src="https://jixing.ink/images/xihe-result-light-direction.jpg"></image>
+                <image src="https://jixing.ink/images/renderer-result-light-point.jpg"></image>
                 
                 
-                <h1>羲和开发日志（二） 平行光</h1> 
+                <h1>渲染器开发日志（三） 点光</h1> 
+            </a>
+            <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2020-11-06T21:02:36&#43;08:00">2020-11-06</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E6%B8%B2%E6%9F%93%E5%99%A8">@渲染器</a>
+                
+                    , 
+                    <a href="/categories/%E5%BC%80%E5%8F%91">@开发</a>
+                
+                    , 
+                    <a href="/categories/%E9%A1%B9%E7%9B%AE">@项目</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/%E6%B8%B2%E6%9F%93">#渲染</a>
+                
+                    , 
+                    <a href="/tags/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA">#光线追踪</a>
+                
+                    , 
+                    <a href="/tags/%E7%81%AF%E5%85%89">#灯光</a>
+                
+                    , 
+                    <a href="/tags/%E7%82%B9%E5%85%89">#点光</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
+    </ul>
+</aside>
+
+            <p>点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图 效果展示 颜色、强度和位置是常识，这里就不进行展示。
+半径 通过影子柔和程度可以看出点光半径的大小
+半径为0cm，如下图：
+半径为5cm，如下图：
+半径为20cm，如下图：
+相关场景模型取自The Breakfast Room(License: CC-BY)</p><a href="/posts/renderer-development-log-3-point-light/">阅读更多、、、</a><br><br>
+        </li>
+        
+        <li >
+            <a href="https://jixing.ink/posts/renderer-development-log-2-direction-light/" title="渲染器开发日志（二） 平行光">
+                
+                
+                <image src="https://jixing.ink/images/renderer-result-light-direction.jpg"></image>
+                
+                
+                <h1>渲染器开发日志（二） 平行光</h1> 
             </a>
             <aside>
     <ul>
@@ -132,7 +200,7 @@
             <em>
                 
                     
-                    <a href="/categories/%E7%BE%B2%E5%92%8C">@羲和</a>
+                    <a href="/categories/%E6%B8%B2%E6%9F%93%E5%99%A8">@渲染器</a>
                 
                     , 
                     <a href="/categories/%E5%BC%80%E5%8F%91">@开发</a>
@@ -175,17 +243,17 @@
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
 散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
 散射角度为0，如下图：
-散射角度为2，如下图：</p><a href="/posts/xihe-development-log-2-direction-light/">阅读更多、、、</a><br><br>
+散射角度为2，如下图：</p><a href="/posts/renderer-development-log-2-direction-light/">阅读更多、、、</a><br><br>
         </li>
         
         <li >
-            <a href="https://jixing.ink/posts/xihe-development-log-1-intro/" title="羲和开发日志（一） 介绍">
+            <a href="https://jixing.ink/posts/renderer-development-log-1-intro/" title="渲染器开发日志（一） 介绍">
                 
                 
-                <image src="https://jixing.ink/images/xihe-intro.jpg"></image>
+                <image src="https://jixing.ink/images/renderer-intro.jpg"></image>
                 
                 
-                <h1>羲和开发日志（一） 介绍</h1> 
+                <h1>渲染器开发日志（一） 介绍</h1> 
             </a>
             <aside>
     <ul>
@@ -199,7 +267,7 @@
             <em>
                 
                     
-                    <a href="/categories/%E7%BE%B2%E5%92%8C">@羲和</a>
+                    <a href="/categories/%E6%B8%B2%E6%9F%93%E5%99%A8">@渲染器</a>
                 
                     , 
                     <a href="/categories/%E5%BC%80%E5%8F%91">@开发</a>
@@ -243,15 +311,15 @@
     </ul>
 </aside>
 
-            <p>本文介绍羲和项目的背景、目标和技术，当前项目状态请点这里。
-关于命名 “羲和”是中国古代神话的太阳女神，是善于运用光的神。 渲染离不开对光的研究，而光学追踪更是如此，所以选用“羲和”来命名这个项目。
+            <p>本文介绍渲染器项目的背景、目标和技术，当前项目状态请点这里。
 背景 最近几年随着GPU性能的提升和技术的迭代，原本费时费力的光线追踪技术被引入到了游戏中。同时也出现了大量相关项目，推动着渲染技术向前发展。 正因如此也让光线追踪技术变得不那么难，有很多优秀的开源项目帮助我们快速地搭建出属于自己的渲染器。
 本人过去几年搞游戏开发，近几年从事家装软件的开发，参与的项目都十分看重画面效果，所以累积了不少渲染技术和想法。 也构建过自己的渲染器，但是在看到UnrealEngine和CryEngine都开源了自己的引擎，就放弃了自己的项目😢。
 不过现在在光线追踪方面有了大量开源项目的支撑，可以让我更专注于渲染核心算法，根据自己所积累的技术自由地实现想要的功能😄。
 渲染器 现在市面上的渲染器有很多，针对不同市场各自的架构也不同。以下是个人对一些渲染器的了解和看法：
 OptiX是由NVIDIA提供的光线追踪技术。 OpenShaderLanguage (OSL)是由ImageWorks (来自索尼影视)开源的一款影视级着色语言。 Appleseed 开源项目，有基于CPU进行渲染，具有出色的性能，项目的架构也很有条理。 它是Graffer的默认渲染器，要知道不少影视作品都会使用Graffer，如：《侏罗纪世界2》、《迷失太空》《金刚狼3》、《权力游戏》等。
 Mitsuba2 开源项目，由几位行业知名的教授（包括《Physically Based Rendering: From Theory to Implementation》的几位著作者）共同构建。 既可以进行CPU渲染，也可以通过OptiX进行GPU渲染。它非常值得研究和学习。
-V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。</p><a href="/posts/xihe-development-log-1-intro/">阅读更多、、、</a><br><br>
+V-Ray 建筑渲染的翘楚，它与很多公司都有合作，像酷家乐和三维家都有使用此软件。这么多年以来积累了大量经验，渲染效果也是行业标杆。 在最新版中印象最深的是能够输出多层图像到PS，让后期处理变得更加简单。
+Iray NVIDIA开发的渲染库，需要购买商业授权。 从介绍来看既可以实时渲染也可以进行影视渲染，功能十分强大，像知名的KeyShot就是基于此库开发的。</p><a href="/posts/renderer-development-log-1-intro/">阅读更多、、、</a><br><br>
         </li>
         
     </ul>

@@ -21,15 +21,15 @@
       </description>
     </item>
     <item>
-      <title>羲和效果测试 - 2020.11.20</title>
-      <link>https://jixing.ink/posts/xihe-test-20201120/</link>
+      <title>渲染器效果测试 - 2020.11.20</title>
+      <link>https://jixing.ink/posts/renderer-test-20201120/</link>
       <pubDate>Fri, 20 Nov 2020 12:26:57 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-test-20201120/</guid>
-      <image>https://jixing.ink//images/xihe-test-20201120.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-test-20201120.jpg&#34; title=&#34;/images/xihe-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
+      <guid>https://jixing.ink/posts/renderer-test-20201120/</guid>
+      <image>https://jixing.ink//images/renderer-test-20201120.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-test-20201120.jpg&#34; title=&#34;/images/renderer-test-20201120.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;介绍 此场景资源取自glTF范例 Sponza，它也是测试渲染器常用的经典场景，原始场景源于Crytek。
 结果 加入天光的效果：
-接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+接下来要支持抗锯齿和全透明材质。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-test-20201120/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

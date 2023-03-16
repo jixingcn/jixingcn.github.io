@@ -11,15 +11,15 @@
     <copyright>版权所有，转发请附原始链接</copyright>
     <lastBuildDate>Sat, 07 Nov 2020 12:19:41 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E5%B0%84%E7%81%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>羲和开发日志（四） 射灯</title>
-      <link>https://jixing.ink/posts/xihe-development-log-4-spot-light/</link>
+      <title>渲染器开发日志（四） 射灯</title>
+      <link>https://jixing.ink/posts/renderer-development-log-4-spot-light/</link>
       <pubDate>Sat, 07 Nov 2020 12:19:41 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-4-spot-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-spot.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-spot.jpg&#34; title=&#34;/images/xihe-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
+      <guid>https://jixing.ink/posts/renderer-development-log-4-spot-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-spot.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-spot.jpg&#34; title=&#34;/images/renderer-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
-羲和 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+渲染器 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>

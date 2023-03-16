@@ -3,14 +3,20 @@ User-agent: *
 
 Allow: /en/pages/about-me/
 Allow: /en/categories/
-Allow: /en/posts/new-ue4-plugin-zipplatformfile/
-Allow: /en/tags/plugin/
+Allow: /en/tags/cloud/
+Allow: /en/tags/computing/
+Allow: /en/posts/launched-a-new-website-for-xihe/
 Allow: /en/posts/
+Allow: /en/tags/private/
 Allow: /en/categories/project/
 Allow: /en/tags/
+Allow: /en/tags/xihe/
+Allow: /en/categories/xihe/
+Allow: /en/
+Allow: /en/posts/new-ue4-plugin-zipplatformfile/
+Allow: /en/tags/plugin/
 Allow: /en/tags/ue4/
 Allow: /en/tags/unzip/
-Allow: /en/
 Allow: /en/tags/intro/
 Allow: /en/categories/page/
 Allow: /en/pages/

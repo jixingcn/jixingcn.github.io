@@ -11,46 +11,46 @@
     <copyright>版权所有，转发请附原始链接</copyright>
     <lastBuildDate>Sat, 07 Nov 2020 12:19:41 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/%E7%81%AF%E5%85%89/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>羲和开发日志（四） 射灯</title>
-      <link>https://jixing.ink/posts/xihe-development-log-4-spot-light/</link>
+      <title>渲染器开发日志（四） 射灯</title>
+      <link>https://jixing.ink/posts/renderer-development-log-4-spot-light/</link>
       <pubDate>Sat, 07 Nov 2020 12:19:41 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-4-spot-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-spot.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-spot.jpg&#34; title=&#34;/images/xihe-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
+      <guid>https://jixing.ink/posts/renderer-development-log-4-spot-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-spot.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-spot.jpg&#34; title=&#34;/images/renderer-result-light-spot.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
-羲和 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+渲染器 Blender 半径为0cm，外角60度，内角30度：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-4-spot-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和开发日志（三） 点光</title>
-      <link>https://jixing.ink/posts/xihe-development-log-3-point-light/</link>
+      <title>渲染器开发日志（三） 点光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-3-point-light/</link>
       <pubDate>Fri, 06 Nov 2020 21:02:36 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-3-point-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-point.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-point.jpg&#34; title=&#34;/images/xihe-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
+      <guid>https://jixing.ink/posts/renderer-development-log-3-point-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-point.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-point.jpg&#34; title=&#34;/images/renderer-result-light-point.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;点光 图形学中，通过点光来模拟小型发光体，如：灯泡、火把、蜡烛等。 这类发光体的特点是从自身表面向周围所有物体发射光线，所以在光线追踪时需要在发光体表面进行采样。 通常使用球体模拟此类物体的形状，根据半径在球表面随机采样。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 用于模拟光源尺寸 尺寸不同造成的阴影也不同 参见下图 效果展示 颜色、强度和位置是常识，这里就不进行展示。
 半径 通过影子柔和程度可以看出点光半径的大小
 半径为0cm，如下图：
 半径为5cm，如下图：
 半径为20cm，如下图：
-相关场景模型取自The Breakfast Room(License: CC-BY)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+相关场景模型取自The Breakfast Room(License: CC-BY)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-3-point-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
-      <title>羲和开发日志（二） 平行光</title>
-      <link>https://jixing.ink/posts/xihe-development-log-2-direction-light/</link>
+      <title>渲染器开发日志（二） 平行光</title>
+      <link>https://jixing.ink/posts/renderer-development-log-2-direction-light/</link>
       <pubDate>Tue, 03 Nov 2020 10:12:39 +0800</pubDate>
       <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/posts/xihe-development-log-2-direction-light/</guid>
-      <image>https://jixing.ink//images/xihe-result-light-direction.jpg</image>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/xihe-result-light-direction.jpg&#34; title=&#34;/images/xihe-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
+      <guid>https://jixing.ink/posts/renderer-development-log-2-direction-light/</guid>
+      <image>https://jixing.ink//images/renderer-result-light-direction.jpg</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/renderer-result-light-direction.jpg&#34; title=&#34;/images/renderer-result-light-direction.jpg&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;平行光 光都是由光源体发射出来的，光源体形状和物体形状决定了物体影子。
 平行光是为了模拟远距离巨型光源体而构建的概念，这样可以减少对光源体的碰撞运算。 现实中太阳对于地球来讲就是这么一个光源体，远而且巨大。
 相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 该参数与平行光无关，但是为便于场景编辑，都会保留此参数 长度 - 光源的影响范围 方向 - 决定了模型的哪些面（依赖法线）可以被照亮 散射角 即一个物体可以从什么角度范围受到光源体的照射 简单来讲散射角度越大，物体可能受到的光照就越多 下面有展示 效果展示 颜色、强度和方向是常识，这里就不进行展示。
 散射角 从百叶窗在墙上的阴影形态可以看出光源的大小。
 散射角度为0，如下图：
-散射角度为2，如下图：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/xihe-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+散射角度为2，如下图：&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/renderer-development-log-2-direction-light/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
   </channel>
