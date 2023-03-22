@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 愚头的技术博客</title>
+    <title>Tags on 愚头的博客</title>
     <link>https://jixing.ink/tags/</link>
-    <description>Recent content in Tags on 愚头的技术博客</description>
+    <description>Recent content in Tags on 愚头的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
     <webMaster>jixing@jixing.ink (纪星)</webMaster>
     <copyright>版权所有，转发请附原始链接</copyright>
-    <lastBuildDate>Thu, 16 Mar 2023 08:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 22:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIM</title>
+      <link>https://jixing.ink/tags/bim/</link>
+      <pubDate>Wed, 22 Mar 2023 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/tags/bim/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/bim/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>IFC</title>
+      <link>https://jixing.ink/tags/ifc/</link>
+      <pubDate>Wed, 22 Mar 2023 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/tags/ifc/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/ifc/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>羲和</title>
+      <link>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</link>
+      <pubDate>Wed, 22 Mar 2023 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>渲染</title>
+      <link>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Wed, 22 Mar 2023 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
     <item>
       <title>计算</title>
       <link>https://jixing.ink/tags/%E8%AE%A1%E7%AE%97/</link>
@@ -26,15 +62,6 @@
       <author>jixing@jixing.ink (纪星)</author>
       <guid>https://jixing.ink/tags/%E7%A7%81%E6%9C%89/</guid>
       <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E7%A7%81%E6%9C%89/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
-      </description>
-    </item>
-    <item>
-      <title>羲和</title>
-      <link>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</link>
-      <pubDate>Thu, 16 Mar 2023 08:00:00 +0800</pubDate>
-      <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
@@ -395,15 +422,6 @@
       <author>jixing@jixing.ink (纪星)</author>
       <guid>https://jixing.ink/tags/%E9%9B%86%E6%98%BE/</guid>
       <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E9%9B%86%E6%98%BE/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
-      </description>
-    </item>
-    <item>
-      <title>渲染</title>
-      <link>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</link>
-      <pubDate>Wed, 10 Mar 2021 09:00:00 +0800</pubDate>
-      <author>jixing@jixing.ink (纪星)</author>
-      <guid>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>

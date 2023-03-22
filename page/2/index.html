@@ -2,17 +2,17 @@
 <html lang="zh">
 <head>
   
-  <title>愚头的技术博客</title>
+  <title>愚头的博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
-<meta name="author" content="纪星" /><link rel="alternate" type="application/rss+xml+xml" href="https://jixing.ink/index.xml" title="愚头的技术博客" /><meta property="og:title" content="愚头的技术博客" />
+<meta name="author" content="纪星" /><link rel="alternate" type="application/rss+xml+xml" href="https://jixing.ink/index.xml" title="愚头的博客" /><meta property="og:title" content="愚头的博客" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://jixing.ink/" /><meta property="og:site_name" content="愚头的技术博客" />
+<meta property="og:url" content="https://jixing.ink/" /><meta property="og:site_name" content="愚头的博客" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="愚头的技术博客"/>
+<meta name="twitter:title" content="愚头的博客"/>
 <meta name="twitter:description" content=""/>
 
 <meta name="generator" content="Hugo 0.111.3">
@@ -42,7 +42,7 @@
   <div id="container">
     <header>
       <h1>
-        <a href="/">愚头的技术博客</a>
+        <a href="/">愚头的博客</a>
       </h1>
       <ul id="social-media">
         
@@ -115,6 +115,74 @@
         
         
         <li class="first" >
+            <a href="https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/" title="记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED”">
+                
+                
+                <image src="https://jixing.ink/images/timed-out-while-waiting-for-gpu-to-catch-up-ue4.jpg"></image>
+                
+                
+                <h1>记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED”</h1> 
+            </a>
+            <aside>
+    <ul>
+        
+        <li>
+            日期：<time class="post-date" datetime="2021-03-10T09:00:00&#43;08:00">2021-03-10</time>
+        </li>
+        
+        <li>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E9%97%AE%E9%A2%98">@问题</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/bug">#bug</a>
+                
+                    , 
+                    <a href="/tags/%E5%B4%A9%E6%BA%83">#崩溃</a>
+                
+                    , 
+                    <a href="/tags/ue4">#UE4</a>
+                
+                    , 
+                    <a href="/tags/%E9%9B%86%E6%98%BE">#集显</a>
+                
+                    , 
+                    <a href="/tags/%E7%8B%AC%E6%98%BE">#独显</a>
+                
+                    , 
+                    <a href="/tags/gpu">#GPU</a>
+                
+                    , 
+                    <a href="/tags/%E6%B8%B2%E6%9F%93">#渲染</a>
+                
+                    , 
+                    <a href="/tags/dxgi_error_device_removed">#DXGI_ERROR_DEVICE_REMOVED</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读2分钟</li>
+    </ul>
+</aside>
+
+            <p>最近在做UE4.26插件时遇到了一个奇怪的渲染崩溃问题。在编辑器模式下，这个插件会自动生成上百个<strong>StaticMesh</strong>资源，但是生成到190个左右时就会崩溃。</p><a href="/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/">阅读更多、、、</a><br><br>
+        </li>
+        
+        <li >
             <a href="https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/" title="修复UE4在macOS Big Sur上的编译问题">
                 
                 
@@ -529,70 +597,6 @@ Albedo Normal 通过以上三个图得到的降噪结果：
             <p>SYCL 这是一个针对高性能计算的抽象层，基于标准的C++语言，规范了并行计算的C++接口，在编译阶段针对不同设备进行并行加速。 例如，对于CPU使用OpenMP进行加速，对NVIDIA的GPU利用CUDA或OpenCL+SPIR进行加速，对AMD的GPU则利用ROCm或OpenCL+SPIR进行加速。 这样最明显的好处是同一套代码，可以充分利用不同的设备来实现高性能计算。
 对于最近几年大热的机器学习和光线追踪来讲，完全可以利用这个技术写一套代码来实现跨设备和平台😄（是真的吗？）。
 实现 介绍 oneAPI DPC++ 由Intel实现的SYCL，基于LLVM并且是开源的。如果不愿意自己编译可以注册申请Intel的DevCloud直接使用（这年头大厂没有个开发云都不能算大厂啊😏）。 ComputeCPP 这是一个实现最完善的SYCL，由Codeplay Software Ltd.开发，并且已经商用。 triSYCL 开源项目，由Xilinx开发，就是最近被AMD收购的那家公司。 hipSYCL 开源项目，由德国Heidelberg大学的HPC技术专家Alpay Aksel主导开发。 相关文章和项目 SYCL官方资源 SYCL技术站（Codeplay Software Ltd.开发） SYCL &amp; Eigen Starter Project Ray-tracing in a Weekend with SYCL: Basic sphere tracing A portable GPU path Tracer library running powered by SYCL.</p><a href="/posts/personal-note-20201108/">阅读更多、、、</a><br><br>
-        </li>
-        
-        <li >
-            <a href="https://jixing.ink/posts/renderer-development-log-4-spot-light/" title="渲染器开发日志（四） 射灯">
-                
-                
-                <image src="https://jixing.ink/images/renderer-result-light-spot.jpg"></image>
-                
-                
-                <h1>渲染器开发日志（四） 射灯</h1> 
-            </a>
-            <aside>
-    <ul>
-        
-        <li>
-            日期：<time class="post-date" datetime="2020-11-07T12:19:41&#43;08:00">2020-11-07</time>
-        </li>
-        
-        <li>
-            分类：
-            <em>
-                
-                    
-                    <a href="/categories/%E6%B8%B2%E6%9F%93%E5%99%A8">@渲染器</a>
-                
-                    , 
-                    <a href="/categories/%E5%BC%80%E5%8F%91">@开发</a>
-                
-                    , 
-                    <a href="/categories/%E9%A1%B9%E7%9B%AE">@项目</a>
-                
-            </em>
-        </li>
-        
-
-        
-        <li>
-            标签：
-            <em>
-                
-                    
-                    <a href="/tags/%E6%B8%B2%E6%9F%93">#渲染</a>
-                
-                    , 
-                    <a href="/tags/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA">#光线追踪</a>
-                
-                    , 
-                    <a href="/tags/%E7%81%AF%E5%85%89">#灯光</a>
-                
-                    , 
-                    <a href="/tags/%E5%B0%84%E7%81%AF">#射灯</a>
-                
-            </em>
-        </li>
-        
-        </li>
-
-        <li>阅读1分钟</li>
-    </ul>
-</aside>
-
-            <p>射灯 该类型的灯是在点光基础增加了光的散射方向和范围。
-相关参数 颜色 - 光源颜色 强度 - 光源亮度 位置 - 光源位置 长度 - 光源的影响范围 半径 - 与点光半径相同 方向 - 射灯的朝向 内角和外角 对于内角范围内的物体，光源强度不会衰减 对于内角到外角范围内的物体，光源强度会线性衰减 对于外角以外的物体，光源无法照射到 效果展示 半径与内外角 半径为0cm，外角60度，内角60度：
-渲染器 Blender 半径为0cm，外角60度，内角30度：</p><a href="/posts/renderer-development-log-4-spot-light/">阅读更多、、、</a><br><br>
         </li>
         
     </ul>

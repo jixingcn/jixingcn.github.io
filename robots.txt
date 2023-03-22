@@ -2,17 +2,21 @@ User-agent: *
 
 
 Allow: /en/pages/about-me/
+Allow: /en/tags/bim/
 Allow: /en/categories/
-Allow: /en/tags/cloud/
-Allow: /en/tags/computing/
-Allow: /en/posts/launched-a-new-website-for-xihe/
+Allow: /en/tags/ifc/
 Allow: /en/posts/
-Allow: /en/tags/private/
 Allow: /en/categories/project/
+Allow: /en/tags/rendering/
+Allow: /en/posts/supports-ifc-format/
 Allow: /en/tags/
 Allow: /en/tags/xihe/
 Allow: /en/categories/xihe/
 Allow: /en/
+Allow: /en/tags/cloud/
+Allow: /en/tags/computing/
+Allow: /en/posts/launched-a-new-website-for-xihe/
+Allow: /en/tags/private/
 Allow: /en/posts/new-ue4-plugin-zipplatformfile/
 Allow: /en/tags/plugin/
 Allow: /en/tags/ue4/

@@ -22,8 +22,23 @@
                 href="https://jixing.ink/pages/about-me/"
                 />
   </url><url>
+    <loc>https://jixing.ink/tags/bim/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/tags/bim/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/tags/bim/"
+                />
+  </url><url>
     <loc>https://jixing.ink/categories/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -37,8 +52,23 @@
                 href="https://jixing.ink/categories/"
                 />
   </url><url>
+    <loc>https://jixing.ink/tags/ifc/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/tags/ifc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/tags/ifc/"
+                />
+  </url><url>
     <loc>https://jixing.ink/posts/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -53,7 +83,7 @@
                 />
   </url><url>
     <loc>https://jixing.ink/tags/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -65,6 +95,56 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://jixing.ink/tags/"
+                />
+  </url><url>
+    <loc>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://jixing.ink/categories/%E7%BE%B2%E5%92%8C/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://jixing.ink/categories/%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://jixing.ink/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/"
+                />
+  </url><url>
+    <loc>https://jixing.ink/posts/supports-ifc-format/</loc>
+    <lastmod>2023-03-22T22:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jixing.ink/en/posts/supports-ifc-format/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://jixing.ink/posts/supports-ifc-format/"
                 />
   </url><url>
     <loc>https://jixing.ink/posts/launched-a-new-website-for-xihe/</loc>
@@ -91,36 +171,6 @@
     <lastmod>2023-03-16T08:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>https://jixing.ink/tags/%E7%BE%B2%E5%92%8C/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://jixing.ink/categories/%E7%BE%B2%E5%92%8C/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://jixing.ink/categories/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://jixing.ink/</loc>
-    <lastmod>2023-03-16T08:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jixing.ink/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://jixing.ink/"
-                />
   </url><url>
     <loc>https://jixing.ink/tags/%E4%BA%91/</loc>
     <lastmod>2023-03-16T08:00:00+08:00</lastmod>
@@ -403,11 +453,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/</loc>
-    <lastmod>2021-03-10T09:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://jixing.ink/tags/%E6%B8%B2%E6%9F%93/</loc>
     <lastmod>2021-03-10T09:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>愚头的技术博客</title>
+    <title>愚头的博客</title>
     <link>https://jixing.ink/</link>
-    <description>Recent content on 愚头的技术博客</description>
+    <description>Recent content on 愚头的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>jixing@jixing.ink (纪星)</managingEditor>
     <webMaster>jixing@jixing.ink (纪星)</webMaster>
     <copyright>版权所有，转发请附原始链接</copyright>
-    <lastBuildDate>Thu, 16 Mar 2023 08:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 22:00:00 +0800</lastBuildDate><atom:link href="https://jixing.ink/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渲染器</title>
       <link>https://jixing.ink/pages/renderer/</link>
@@ -30,6 +30,16 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/5e13a51a9c71fb03f12b67a2852027a2.png&#34; title=&#34;images/5e13a51a9c71fb03f12b67a2852027a2.png&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;曾经做过游戏，后来从事家装和GIS研发，目前专注于渲染和AI技术。
 热衷于将渲染和AI运用到BIM上，通过技术扩展BIM在家装方面的运用。 当然想聊聊CG或游戏相关技术也没问题😄。
 欢迎大家给我的文章留言或通过邮件交流。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/pages/about-me/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+    <item>
+      <title>支持渲染IFC格式文件</title>
+      <link>https://jixing.ink/posts/supports-ifc-format/</link>
+      <pubDate>Wed, 22 Mar 2023 22:00:00 +0800</pubDate>
+      <author>jixing@jixing.ink (纪星)</author>
+      <guid>https://jixing.ink/posts/supports-ifc-format/</guid>
+      <image>https://jixing.ink//images/supports-ifc-format.png</image>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jixing.ink/images/supports-ifc-format.png&#34; title=&#34;/images/supports-ifc-format.png&#34;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;详细信息请访问这里：https://xihe.jixing.ink/zh/posts/supports-rendering-ifc-format/.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#34;https://jixing.ink/posts/supports-ifc-format/&#34;&gt;阅读更多、、、&lt;/a&gt;&lt;/p&gt;
       </description>
     </item>
     <item>
