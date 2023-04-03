@@ -1,19 +1,20 @@
 <!doctype html>
 <html lang="zh">
 <head>
-  
-  <title>愚头的博客</title>
+  <title>新接口 - ZipPlatformFile | 愚头的博客</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="The HTML5 Herald" />
-<meta name="author" content="纪星" /><link rel="alternate" type="application/rss+xml+xml" href="https://jixing.ink/posts/index.xml" title="愚头的博客" /><meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jixing.ink/posts/" /><meta property="og:site_name" content="愚头的博客" />
+<meta name="author" content="纪星" /><meta property="og:title" content="新接口 - ZipPlatformFile" />
+<meta property="og:description" content="更新和修复 - ZipPlatformFile" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jixing.ink/posts/new-apis-zipplatformfile/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-03T14:46:04+08:00" />
+<meta property="article:modified_time" content="2023-04-03T14:46:04+08:00" /><meta property="og:site_name" content="愚头的博客" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="新接口 - ZipPlatformFile"/>
+<meta name="twitter:description" content="更新和修复 - ZipPlatformFile"/>
 
 <meta name="generator" content="Hugo 0.111.3">
     
@@ -72,7 +73,7 @@
         
         <li>
           
-          <a href="/en/posts/">ENG</a>
+          <a href="/en/posts/new-apis-zipplatformfile/">ENG</a>
           
           
         </li>
@@ -109,94 +110,115 @@
 
 
 
-<section id="list">
-
-    
-
-    
-        <h2>Posts</h2>
-    
+<article>
 
     
     
-
+    <image src="https://jixing.ink/images/new-apis-zipplatformfile.jpg"></image>
+    
     
 
-    <h3>2021</h3>
+    <h1>新接口 - ZipPlatformFile</h1>
+
+    
+        <aside>
     <ul>
         
         <li>
-            <a href="https://jixing.ink/posts/dont-install-free-version-of-incredibuild-for-ue4/">想编译UE4？请不要安装免费版IncrediBuild！</a>
-            <time class="date-meta">03-10</time>
+            日期：<time class="post-date" datetime="2023-04-03T14:46:04&#43;08:00">2023-04-03</time>
         </li>
         
         <li>
-            <a href="https://jixing.ink/posts/timed-out-while-waiting-for-gpu-to-catch-up-ue4/">记录一次UE4渲染线程崩溃的问题“DXGI ERROR DEVICE REMOVED”</a>
-            <time class="date-meta">03-10</time>
+            分类：
+            <em>
+                
+                    
+                    <a href="/categories/%E9%A1%B9%E7%9B%AE">@项目</a>
+                
+            </em>
         </li>
         
+
+        
+        <li>
+            标签：
+            <em>
+                
+                    
+                    <a href="/tags/%E6%8F%92%E4%BB%B6">#插件</a>
+                
+                    , 
+                    <a href="/tags/ue4">#UE4</a>
+                
+                    , 
+                    <a href="/tags/unzip">#unzip</a>
+                
+                    , 
+                    <a href="/tags/%E8%A7%A3%E5%8E%8B">#解压</a>
+                
+            </em>
+        </li>
+        
+        </li>
+
+        <li>阅读1分钟</li>
     </ul>
-    
+</aside>
+
     
 
-    <h3>2020</h3>
+    
+
+    <div class="article-content"><h2 id="新增两个接口">新增两个接口</h2>
+<p><a href="/posts/new-ue4-plugin-zipplatformfile">ZipPlatformFile相关介绍</a></p>
+<iframe src="https://blueprintue.com/render/9v7tpbmk/" scrolling="no" allowfullscreen style="width: 100%;height: 400px;"></iframe>
+<p><strong>列出所有文件</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>TArray<span style="color:#f92672">&lt;</span>FString<span style="color:#f92672">&gt;</span> FoundFiles;
+</span></span><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>FindFiles(<span style="color:#66d9ef">this</span>, FoundFiles<span style="color:#75715e">/*所有子文件*/</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip&#34;</span>)<span style="color:#75715e">/*挂载目录*/</span>, TEXT(<span style="color:#e6db74">&#34;.txt&#34;</span>)<span style="color:#75715e">/*扩展名*/</span>, true<span style="color:#75715e">/*是否递归*/</span>);
+</span></span></code></pre></div><blockquote>
+</blockquote>
+<p><strong>列出所有目录</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>TArray<span style="color:#f92672">&lt;</span>FString<span style="color:#f92672">&gt;</span> FoundDirectories;
+</span></span><span style="display:flex;"><span>UZipPlatformFileBlueprintFunctionLibrary<span style="color:#f92672">::</span>FindDirectories(<span style="color:#66d9ef">this</span>, FoundDirectories<span style="color:#75715e">/*所有子目录*/</span>, TEXT(<span style="color:#e6db74">&#34;/Game/test_zip&#34;</span>)<span style="color:#75715e">/*挂载目录*/</span>);
+</span></span></code></pre></div><h2 id="修复一些问题">修复一些问题</h2>
+<ul>
+<li>[已修复] 读取空文件会导致崩溃</li>
+<li>[已修复] 无法获取根目录文件信息</li>
+</ul>
+</div>
+    
+
+    
+    
+<script src="https://utteranc.es/client.js"
+    repo="jixingcn/jixing.ink"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    
+
+</article>
+
+
+<section class="post-nav">
     <ul>
         
         <li>
-            <a href="https://jixing.ink/posts/fix-the-ue4-compile-issue-after-the-macos-big-sur-upgrade/">修复UE4在macOS Big Sur上的编译问题</a>
-            <time class="date-meta">12-19</time>
+            <a href="https://jixing.ink/posts/supports-ifc-format/"><i class="fa fa-chevron-circle-left"></i> 支持渲染IFC格式文件</a>
         </li>
         
-        <li>
-            <a href="https://jixing.ink/posts/renderer-test-20201124/">渲染器效果测试 - 2020.11.24 半透明、景深、降噪(DLSS)和细化反弹次数</a>
-            <time class="date-meta">11-24</time>
-        </li>
-        
-        <li>
-            <a href="https://jixing.ink/posts/renderer-test-20201120/">渲染器效果测试 - 2020.11.20</a>
-            <time class="date-meta">11-20</time>
-        </li>
-        
-        <li>
-            <a href="https://jixing.ink/posts/renderer-test-20201119/">渲染器效果测试 - 2020.11.11 (后续)</a>
-            <time class="date-meta">11-19</time>
-        </li>
-        
-        <li>
-            <a href="https://jixing.ink/posts/renderer-test-20201111/">渲染器效果测试 - 2020.11.11</a>
-            <time class="date-meta">11-11</time>
-        </li>
         
     </ul>
-    
-    
-
 </section>
+  
+    
+    
+  
 
 
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
 
 
 
